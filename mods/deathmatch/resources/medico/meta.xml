@@ -1,0 +1,11 @@
+<meta>
+    <script src="camilla.lua" type="server" />
+    <script src="medico.lua" type="server" />
+    <script src="fuegos_c.lua" type="client" size="799" />
+    <script src="fuegos.lua" type="server" />
+    <file src="alarm/firealarm.mp3" />
+    <file src="alarm/firealarmsecond.mp3" />
+    <file src="fire.dff" />
+    <export function="anularLlevarse" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

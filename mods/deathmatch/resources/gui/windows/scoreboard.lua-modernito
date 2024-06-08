@@ -1,0 +1,309 @@
+--[[
+	Author: danibayez
+	MTA Forum: https://goo.gl/QX0mcT
+	
+	Copyright (c) 2017 DownTown Roleplay
+
+	This program is free software; you can redistribute it and/or modify
+	it under the terms of the GNU General Public License as published by
+	the Free Software Foundation; either version 3 of the License, or
+	(at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public License
+	along with this program. If not, see <http://www.gnu.org/licenses/>.
+	
+	Script modified by DownTown Roleplay.
+]]
+
+screenW, screenH = guiGetScreenSize( )
+
+function _getZoneName( x, y, z )
+	if ( getElementDimension( localPlayer ) == 0 ) then
+		local zoneName = getZoneName( x, y, z ) .. " (San Fierro)"
+		return zoneName 
+	else
+		local zoneName = "Interior ID "..tostring(getElementDimension(localPlayer)).." (San Fierro)"
+		return zoneName
+	end
+end
+
+function isCursorOnElement( posX, posY, width, height )
+	if isCursorShowing( ) then
+		local mouseX, mouseY = getCursorPosition( )
+		local mouseX, mouseY = mouseX * screenW, mouseY * screenH
+		if ( mouseX > posX and mouseX < ( posX + width ) and mouseY > posY and mouseY < ( posY + height ) ) then
+			return true
+		end
+	end
+	return false
+end
+
+function cursorY( )
+	if isCursorShowing( ) then
+		local _, mouseY = getCursorPosition( )
+		return mouseY * screenH
+	end
+	return 0
+end
+
+function convertNumber( number )  
+	local formatted = number  
+	while true do      
+		formatted, k = string.gsub( formatted, "^(-?%d+)(%d%d%d)", '%1.%2' )    
+		if ( k==0 ) then      
+			break   
+		end  
+	end  
+	return formatted
+end
+
+function round(num) 
+    if ( num >= 0 ) then return math.floor( num + .5 ) 
+    else return math.ceil( num - .5 ) end
+end
+
+function dxDrawCorner( x, y, r, color, corner, postGUI )
+	local corner = corner or 1
+	local start = corner % 2 == 0 and 0 or -r
+	local stop = corner % 2 == 0 and r or 0
+	local m = corner > 2 and -1 or 1
+	local h = ( corner == 1 or corner == 3 ) and -1 or 1
+ 	for yoff = start, stop do
+ 		local xoff = math.sqrt( r * r - yoff * yoff ) * m
+ 		dxDrawRectangle( x - xoff, y + yoff, xoff, h, color, postGUI )
+	end 
+end
+
+function _dxDrawRectangle( posX, posY, width, height, radius, color, postGUI )	
+	local posX, posY, width, height = round( posX ), round( posY ), round( width ), round( height )
+	local radius = radius and math.min( radius, math.min( width, height ) / 2 )  or 12
+	
+	dxDrawRectangle( posX, posY + radius, width, height - radius * 2, color, postGUI )
+	dxDrawRectangle( posX + radius, posY, width - 2 * radius, radius, color, postGUI )
+	dxDrawRectangle( posX + radius, posY + height - radius, width - 2 * radius, radius, color, postGUI )
+	
+	dxDrawCorner( posX + radius, posY + radius, radius, color, 1, postGUI )
+	dxDrawCorner( posX + radius, posY + height - radius, radius, color, 2, postGUI )
+	dxDrawCorner( posX + width - radius, posY + radius, radius, color, 3, postGUI )
+	dxDrawCorner( posX + width - radius, posY + height - radius, radius, color, 4, postGUI )
+end
+
+local width, height, h_height, r_height, s_width = 500, 520, 70, 40, 15
+local renderTarget = dxCreateRenderTarget( width, height, true )
+local font = dxCreateFont( "font.ttf", 18 )
+local posX = ( screenW - width ) / 2
+local isScrollActive, scrollCache, scrollColor = _, 0, 0
+local players = { }
+local showed = false
+local showedTime = 0
+
+addEventHandler( "onClientRender", root,
+	function( )
+		if ( showed == true ) then
+		
+			local c_height = #players * r_height
+			local posY = ( screenH - ( math.min( c_height, height ) + h_height ) ) / 2
+			dxDrawRectangle( posX, posY, width, h_height, tocolor( 42, 93, 132, 255 ), true )
+			--dxDrawImage( posX + 10, posY + ( h_height - 64 ), 64, 64, ":players/images/skins/" .. getElementModel( localPlayer ) .. ".png", 0, 0, 0, tocolor( 255, 255, 255, 255 ), true )
+			dxDrawText( #players .. "/100", posX, posY, posX + width - 10, posY + h_height, tocolor( 255, 255, 255, 255 ), 1, font, "right", "center", false, false, true )
+			local headerX, headerY = posX + 15, posY + 7 
+			dxDrawImageSection( headerX, headerY, 16, 16, 16, 0, 16, 16, "icons.png", 0, 0, 0, tocolor( 255, 255, 255, 255 ), true )
+			dxDrawText( getPlayerName( localPlayer ):gsub( "_", " " ), headerX + 20, headerY, headerX + 20, headerY + 16, tocolor( 255, 255, 255, 255 ), 0.55, font, "left", "center", false, false, true )
+			dxDrawImageSection( headerX, headerY + 20, 16, 16, 32, 0, 16, 16, "icons.png", 0, 0, 0, tocolor( 255, 255, 255, 255 ), true )
+			dxDrawText( convertNumber( getPlayerMoney( ) ) .. "$", headerX + 20, headerY + 20, headerX + 20, headerY + 36, tocolor( 255, 255, 255, 255 ), 0.55, font, "left", "center", false, false, true )
+			dxDrawImageSection( headerX, headerY + 40, 16, 16, 0, 0, 16, 16, "icons.png", 0, 0, 0, tocolor( 255, 255, 255, 255 ), true )
+			dxDrawText( _getZoneName( getElementPosition( localPlayer ) ), headerX + 20, headerY + 40, headerX + 20, headerY + 56, tocolor( 255, 255, 255, 255 ), 0.55, font, "left", "center", false, false, true )
+			
+			local offsetY = 0
+			local _width = c_height > height and width - s_width - 5 or width
+			
+				dxSetRenderTarget( renderTarget, true )
+				if isElement(getLocalPlayer()) then
+					local r, g, b = getPlayerNametagColor( getLocalPlayer() )
+					local posY = offsetY - scrollCache
+					dxDrawRectangle( 0, posY, width, r_height, tocolor( 0, 0, 0, 200 ) )
+					dxDrawText( ( getElementData( getLocalPlayer(), "playerid" ) or 0 ), 0, posY, 50, posY + r_height, tocolor( r, g, b, 255 ), 0.6, font, "center", "center" )
+					dxDrawText( "(Tú) "..getPlayerName( getLocalPlayer() ):gsub( "_", " " ), 60, posY, 160, posY + r_height, tocolor( r, g, b, 255 ), 0.6, font, "left", "center" )
+					if getElementData(getLocalPlayer(), "enc") then -- Es Encubierto :D aumento de PING
+						dxDrawText( tostring(tonumber(getPlayerPing(getLocalPlayer())+150)), _width - 70, posY, _width, posY + r_height, tocolor( r, g, b, 255 ), 0.6, font, "center", "center" )
+				 	else
+						dxDrawText( getPlayerPing( getLocalPlayer() ), _width - 70, posY, _width, posY + r_height, tocolor( r, g, b, 255 ), 0.6, font, "center", "center" )
+					end
+					offsetY = offsetY + r_height
+				end
+				for k, v in ipairs(players) do
+					if isElement(v[2]) and v[2] ~= getLocalPlayer() then
+						local r, g, b = getPlayerNametagColor( v[2] )
+						local posY = offsetY - scrollCache
+						dxDrawRectangle( 0, posY, width, r_height, tocolor( 0, 0, 0, 200 ) )
+						dxDrawText( ( getElementData( v[2], "playerid" ) or 0 ), 0, posY, 50, posY + r_height, tocolor( r, g, b, 255 ), 0.6, font, "center", "center" )
+						dxDrawText( getPlayerName( v[2] ):gsub( "_", " " ), 60, posY, 160, posY + r_height, tocolor( r, g, b, 255 ), 0.6, font, "left", "center" )
+						if getElementData(v[2], "enc") then -- Encubierto aumento ping
+							dxDrawText( tostring(tonumber(getPlayerPing( v[2])+150)), _width - 70, posY, _width, posY + r_height, tocolor( r, g, b, 255 ), 0.6, font, "center", "center" )
+						else
+							dxDrawText( getPlayerPing( v[2] ), _width - 70, posY, _width, posY + r_height, tocolor( r, g, b, 255 ), 0.6, font, "center", "center" )
+						end
+						offsetY = offsetY + r_height
+					end
+				end
+				
+				if ( width ~= _width ) then
+				
+					local vRatio = height / c_height
+					local s_height = height * vRatio
+					local scrollY = ( vRatio * scrollCache ) + 5
+					local isHover = isCursorOnElement( posX + _width, posY + scrollY + h_height, s_width, s_height - 10 )
+					local r, g, b = interpolateBetween( 42, 93, 132, 22, 73, 112, scrollColor, "Linear" )
+					scrollColor = math.min( math.max( isScrollActive and scrollColor + 0.1 or scrollColor - 0.1, 0 ), 1 )
+					_dxDrawRectangle( _width, 5, s_width, height - 10, 10, tocolor( 0, 0, 0, 200 ) )
+					_dxDrawRectangle( _width, scrollY, s_width, s_height - 10, 10, tocolor( r, g, b, 255 ) )
+					
+					if ( isHover and getKeyState( "mouse1" ) ) then isScrollActive = not isScrollActive and cursorY( ) - scrollY + 5 or isScrollActive elseif ( not getKeyState( "mouse1" ) ) then isScrollActive = nil end
+					
+					if ( isScrollActive ) then
+						
+						scrollCache = math.min( math.max( ( cursorY( ) - isScrollActive ) / vRatio, 0 ), c_height - height )
+						
+					end
+					
+				end
+				
+			dxSetRenderTarget( )
+			dxDrawImage( posX, posY + h_height, width, height, renderTarget, 0, 0, 0, tocolor( 255, 255, 255, 255 ), true )
+			
+		end
+	end
+)
+
+function colocarJugadores()
+	local t = { }
+		for key, value in ipairs( getElementsByType( "player" ) ) do
+			table.insert( t,
+				{
+					getElementData( value, "playerid" ) or 0,
+					value,
+				}
+			)
+		end
+	table.sort( t, function( a, b ) return a[1] < b[1] end )
+	players = t
+	scrollCache = math.min( scrollCache, #players * r_height )
+end
+addEvent("onColocarJugadores", true)
+addEventHandler("onColocarJugadores", getRootElement(), colocarJugadores)
+
+addEventHandler( "onClientKey", root,
+	function( key, mode )
+		local c_height = #players * r_height
+		if key == "tab" and mode and showed == false then
+			showed = true
+			showedTime = getTickCount()
+		elseif key == "tab" and not mode and getTickCount()-showedTime > 400 then
+			showed = false
+		end
+		if (showed == true) and ( c_height > height ) then
+			if ( key == "mouse_wheel_up" ) then
+				scrollCache = math.max( scrollCache - r_height, 0 )
+			elseif ( key == "mouse_wheel_down" ) then
+				scrollCache = math.min( scrollCache + r_height, c_height - height )
+			end
+		end
+	end
+)
+
+local ping = getPlayerPing(getLocalPlayer())
+local x, y = guiGetScreenSize ( )
+
+r,g,b=0,0,0
+alpha=150
+
+
+local root = getRootElement()
+local player = getLocalPlayer()
+local counter = 0
+local starttick
+local currenttick
+addEventHandler("onClientRender",root,
+	function()
+		if not starttick then
+			starttick = getTickCount()
+		end
+		counter = counter + 1
+		currenttick = getTickCount()
+		if currenttick - starttick >= 1000 then
+			setElementData(player,"FPS",counter)
+			counter = 0
+			starttick = false
+		end
+	end
+)
+
+function drawStates ()
+    addEventHandler ( "onClientRender", root, pingState )
+	addEventHandler ( "onClientRender", root, fpsState )
+end
+addEventHandler ( "onClientResourceStart", resourceRoot, drawStates )
+
+
+
+function pingState()
+    posx= x-30
+    posy= 20
+
+    dxDrawRectangle ( posx, posy, 4, 4, tocolor ( r, g, b, alpha ) )
+	dxDrawRectangle ( posx+5, posy-4, 4,8, tocolor ( r, g, b, alpha ) )
+	dxDrawRectangle ( posx+10, posy-8, 4,12, tocolor ( r, g, b, alpha ) )
+	dxDrawRectangle ( posx+15, posy-12, 4,16, tocolor ( r, g, b, alpha ) )
+	dxDrawRectangle ( posx+20, posy-16, 4,20, tocolor ( r, g, b, alpha ) )
+
+	r2,g2,b2=255,255,255
+    alpha2=255
+
+if ping <= 100 then
+
+    dxDrawRectangle ( posx, posy, 4, 4, tocolor ( r2, g2, b2, alpha2 ) )
+	dxDrawRectangle ( posx+5, posy-4, 4,8, tocolor ( r2, g2, b2, alpha2 ) )
+	dxDrawRectangle ( posx+10, posy-8, 4,12, tocolor ( r2, g2, b2, alpha2 ) )
+	dxDrawRectangle ( posx+15, posy-12, 4,16, tocolor ( r2, g2, b2, alpha2 ) )
+	dxDrawRectangle ( posx+20, posy-16, 4,20, tocolor ( r2, g2, b2, alpha2 ) )
+
+elseif ping >=101 and ping <= 200 then
+
+    dxDrawRectangle ( posx, posy, 4, 4, tocolor ( r2, g2, b2, alpha2 ) )
+	dxDrawRectangle ( posx+5, posy-4, 4,8, tocolor ( r2, g2, b2, alpha2 ) )
+	dxDrawRectangle ( posx+10, posy-8, 4,12, tocolor ( r2, g2, b2, alpha2 ) )
+	dxDrawRectangle ( posx+15, posy-12, 4,16, tocolor ( r2, g2, b2, alpha2 ) )
+
+elseif ping >=201 and ping <= 300 then
+
+    dxDrawRectangle ( posx, posy, 4, 4, tocolor ( r2, g2, b2, alpha2 ) )
+	dxDrawRectangle ( posx+5, posy-4, 4,8, tocolor ( r2, g2, b2, alpha2 ) )
+	dxDrawRectangle ( posx+10, posy-8, 4,12, tocolor ( r2, g2, b2, alpha2 ) )
+
+elseif ping >=301 and ping <= 400 then
+
+    dxDrawRectangle ( posx, posy, 4, 4, tocolor ( r2, g2, b2, alpha2 ) )
+	dxDrawRectangle ( posx+5, posy-4, 4,8, tocolor ( r2, g2, b2, alpha2 ) )
+
+elseif ping >=401 and ping <= 500 then
+
+    dxDrawRectangle ( posx, posy, 4, 4, tocolor ( r2, g2, b2, alpha2 ) )
+
+end
+
+end
+
+function fpsState()
+    posx2= x-55
+    posy2= 13
+
+    dxDrawText ( getElementData(getLocalPlayer(),"FPS"), posx2-12, posy2-6, x, y, tocolor ( 255, 255, 255, 255 ), 1.4, "default-bold" )
+
+	dxDrawText ( "FPS", posx2-13, posy2+10, x, y, tocolor ( 255, 255, 255, 255 ), 1.0, "default-bold" )
+	dxDrawText ( "PING", posx2+23, posy2+10, x, y, tocolor ( 255, 255, 255, 255 ), 1.0, "default-bold" )
+end

@@ -1,0 +1,184 @@
+<!--
+Copyright (c) 2010 MTA: Paradise
+Copyright (c) 2020 DownTown RolePlay
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+<meta>
+    <info author="mabako and Jefferson" name="Graphical User Interface" version="1.3" />
+    
+    
+    <script src="windows/login_s.lua" type="server" />
+    <script src="windows/windows.lua" type="client" size="687" />
+    <script src="windows/scoreboard.lua" type="client" size="2685" />
+    
+    <script src="windows/daritem.lua" type="client" size="1437" />
+    <export function="updateGive" type="client" />
+    
+    <script src="windows/maletero.lua" type="client" size="11033" />
+    <export function="updateMaletero" type="client" />
+    <export function="updateInventarioMaletero" type="client" />
+    
+    <script src="windows/mueble.lua" type="client" size="5787" />
+    <export function="updateArmario" type="client" />
+    <export function="updateInventarioArmario" type="client" />
+    
+    <script src="windows/shop.lua" type="client" size="2981" />
+    <script src="windows/cabina.lua" type="client" size="2312" />
+    <export function="updateCabinaSelection" type="client" />
+    
+    
+    <!-- Updates the content of the currently showing shop
+		parameters:
+			(table) new content - see shops/shop_configurations.lua for an example. This only contains all items.
+			(string) shop name - name of the shop, needs to fit on one line.
+	-->
+    <export function="updateShopContent" type="client" />
+    <script src="windows/jobs.lua" type="client" size="9731" />
+    
+    <!-- Updates the job list
+		parameters:
+			(table) new content - [1..n] = name table
+	-->
+    <export function="updateJobs" type="client" />
+    
+    <script src="verify/create_character.lua" />
+    <script src="verify/create_character.lua" type="client" size="2288" />
+    <script src="windows/create_character_s.lua" />
+    <script src="windows/create_character.lua" type="client" size="4964" />
+    <script src="windows/copias.lua" type="client" size="2129" />
+    <script src="gui_s.lua" type="server" />
+    
+    <script src="windows/characters.lua" type="client" size="2575" />
+    <!-- Updates the characters showing in the char selection.
+		parameters:
+			(table) all of a player's characters that'll be shown in the char selection.
+	-->
+    <export function="updateCharacters" type="client" />
+    <export function="updateCopias" type="client" />
+    
+    <script src="windows/inventory.lua" type="client" size="5825" />
+    <!-- Updates the inventory. -->
+    <export function="updateInventory" type="client" />
+    
+    <script src="windows/faction.lua" type="client" size="12826" />
+    
+    <!-- Updates the faction overview
+		parameters:
+			(number) unique ID of the faction
+			(table) all members
+			(string) name of the faction
+	-->
+    <export function="updateFaction" type="client" />
+    
+    <script src="windows/languages.lua" type="client" size="2673" />
+    <!-- Updates the characters' languages showing in the language selection.
+		parameters:
+			(table) all of a char's languages that'll be shown in the language selection.
+	-->
+    <export function="updateLanguages" type="client" />
+    
+    <script src="gui_c.lua" type="client" size="20636" />
+    
+    <!-- Shows a GUI window.
+		parameters:
+			(string) window name - name of the windows, needs to exist as windows.<name> in this resource
+		optional parameters:
+			(bool) forced - if set to true, the player can't close the window unless hide() is called. - default: false
+			(bool) don't enable input - if set to true, this will leave the input disabled thus you can use any key binds, walk etc. Has no effect if the window is not forced. - default: false
+			(bool) show mouse - if set to true, it'll show the mouse cursor when opening the GUI. Has no effect when input is enabled or the window is forced. - default: false
+		returns:
+			(bool) true if the window creation was successful, false otherwise.
+	-->
+    <export function="show" type="client" />
+    
+    <!-- Hides the currently opened GUI window. -->
+    <export function="hide" type="client" />
+    
+    <!-- Returns the name of the currently active GUI window.
+		returns:
+			(string) name of the GUI window or (nil) if no window is showing
+			(bool) true if the window was forced, false otherwise
+	-->
+    <export function="getShowing" type="client" />
+    
+    <script src="windows/mochila.lua" type="client" size="8370" />
+    <export function="updateMochila" type="client" />
+    <export function="updateInventarioMochila" type="client" />
+    
+    <!-- Hints, boxes, stuff -->
+    <script src="hint_c.lua" type="client" size="2551" />
+    <file src="images/error.png" />
+    <file src="images/info.png" />
+    <file src="images/okay.png" />
+    <file src="images/warning.png" />
+    <file src="images/maletero.png" />
+    <file src="images/placa.png" />
+    <file src="images/1.png" />
+    <file src="images/2.png" />
+    <file src="images/3.png" />
+    <file src="images/-2.png" />
+    <file src="images/-1.png" />
+    <file src="images/capo.png" />
+    <file src="images/logo.png" />
+    <file src="images/bg.png" />
+    
+    
+    <!-- Shows a hint-box at the bottom of the screen
+		parameters:
+			(string) title of the box
+			(string) text of the box
+			(number) icon - 1 = okay, 2 = warning, 3 = error, 4 = info
+			(number) duration in ms
+		returns:
+			(bool) true
+	-->
+    <export function="hint" type="client" />
+    
+    <!--<script src="hud_c.lua" type="client" size="1810" />-->
+    
+    <!-- AsuS include-->
+    
+    <script src="dxGUI/dxWindow.lua" type="client" size="1237" />
+    <script src="dxGUI/dxButton.lua" type="client" size="1197" />
+    <script src="dxGUI/dxEdit.lua" type="client" size="1597" />
+    <script src="dxGUI/dxGirdlist.lua" type="client" size="5381" />
+    <script src="dxGUI/dxCheckBox.lua" type="client" size="1117" />
+    <script src="dxGUI/main_c.lua" type="client" size="1079" />
+    <script src="dxGUI/core_c.lua" type="client" size="8572" />
+    
+    <file src="dxGUI/fonts/main.ttf" />
+    
+    <!-- Mecanic include-->
+    <script src="windows/mecanico_c.lua" type="client" size="41786" />
+    <script src="windows/mecanico_s.lua" type="server" />
+    
+    <file src="images/mecanico/-2.png" />
+    <file src="images/mecanico/-1.png" />
+    <file src="images/mecanico/1.png" />
+    <file src="images/mecanico/2.png" />
+    <file src="images/mecanico/3.png" />
+    <file src="images/mecanico/4.png" />
+    <file src="images/mecanico/5.png" />
+    <file src="images/mecanico/6.png" />
+    <file src="images/mecanico/7.png" />
+    <file src="images/mecanico/8.png" />
+    <file src="images/mecanico/9.png" />
+    <file src="images/mecanico/10.png" />
+    <file src="images/mecanico/11.png" />
+    <file src="images/mecanico/vini.png" />
+    
+    
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

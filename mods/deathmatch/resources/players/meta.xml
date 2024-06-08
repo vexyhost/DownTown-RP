@@ -1,0 +1,306 @@
+<!--
+Copyright (c) 2010 MTA: Paradise
+Copyright (c) 2020 DownTown RolePlay
+Copyright (c) 2017 DownTown Roleplay
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<meta>
+    <info author="mabako y Jefferson" name="Manager de Players" version="1.2" />
+    <script src="main.lua" />
+    <script src="main_c.lua" type="client" size="6236" />
+    <min_mta_version client="1.5.4" server="1.5.4" />
+    
+    <!-- Returns all groups the player is in, starting with the one with the highest priority.
+		parameters:
+			(player) the player whom to return the groups of.
+		returns:
+			(table) all groups the player is in, an empty table if none.
+	-->
+    <export function="getGroups" />
+    <export function="getCharacterID" />
+    
+    <!-- Returns the name that's assigned to a character ID.
+		parameters:
+			(number) Character ID you want to get the name from
+		returns:
+			(string) Character name if successful, (bool) false otherwise.
+	-->
+    <export function="getCharacterName" />
+    
+    <!-- (server) Returns true if the player is logged in.
+		parameters:
+			(player) the player to check.
+		returns:
+			(bool) true if the player is logged in, false otherwise.
+	-->
+    <export function="isLoggedIn" />
+    
+    <!-- (client) Returns true if the local player is logged in.
+		returns:
+			(bool) true if the local player is logged in, false otherwise.
+	-->
+    <export function="isLoggedIn" type="client" />
+    
+    <!-- Returns true if the player is logged in.
+		parameters:
+			(player) the player to check.
+		returns:
+			(bool) true if he's logged in into any user, (bool) false otherwise.
+	-->
+    <export function="getUserID" />
+    
+    <!-- Returns true if the player is logged in.
+		parameters:
+			(player) the player to check.
+		returns:
+			(bool) true if he's logged in into any user, (bool) false otherwise.
+	-->
+    <export function="getUserName" />
+    
+    <!-- -- -->
+    
+    <!-- sets the money value for a player.
+		parameters:
+			(player) the player to set the money for.
+			(number) the amount of money the player now should have.
+		returns:
+			(bool) true if successful, false otherwise.
+	-->
+    <export function="setMoney" />
+    
+    <!-- gives the player money.
+		parameters:
+			(player) the player to give the money to.
+			(number) the amount of money you want to give to the player.
+		returns:
+			(bool) true if successful, false otherwise.
+	-->
+    <export function="giveMoney" />
+    
+    <!-- takes money from a player.
+		parameters:
+			(player) the player to take the money from.
+			(number) the amount of money to take from the player.
+		returns:
+			(bool) true if successful, false otherwise (e.g. if the player does not have enough money).
+	-->
+    <export function="takeMoney" />
+    
+    <!-- retrieves the amount of money a player has
+		parameters:
+			(player) the player to set the money for.
+		returns:
+			(number) the amount of money a player has, 0 if he/she isn't logged in.
+	-->
+    <export function="getMoney" />
+    
+    <!-- -- -->
+    
+    <!-- Creates a new character.
+		parameters:
+			(player) the player who the new character will belong to.
+			(string) name - the name of the character.
+			(number) skin - the character's skin. See http://wiki.multitheftauto.com/wiki/All_Skins_Page for a list of skins.
+		returns:
+			(bool) true if the character was created, false otherwise (such as: a character with that name already exists)
+	-->
+    <export function="createCharacter" />
+    
+    <!-- sends the player an updated character list
+		parameters:
+			(player) player of whom to reload the char list
+		returns:
+			(bool) true if successful, false otherwise.
+	-->
+    <export function="updateCharacters" />
+    <!-- sends the player an updated character list
+		parameters:
+			(player) player of whom to reload the char list
+			(number) userID of the player
+		returns:
+			(bool) true if successful, false otherwise.
+	-->
+    
+    
+    <export function="updateCharactersUserID" />
+    
+    
+    <!-- (client) Function that is called whenever you select a char from the chararcter selection.
+		parameters:
+			(number) character id - the char ID you want to spawn as.
+			(string) name - the name of the character, only used to check if it's not the one you're currently playing as.
+	-->
+    <export function="selectCharacter" type="client" />
+    
+    <!-- Updates the text and color of a player's nametag.
+		parameters:
+			(player) player to update the nametag of.
+		returns:
+			(bool) true if successful, false otherwise.
+	-->
+    <export function="updateNametag" />
+    
+    <!-- Returns the player's current job.
+		parameters:
+			(player) player to check.
+		returns:
+			(string) job (e.g. 'taxi') or (nil) if none.
+	-->
+    <export function="getJob" />
+    
+    <!-- Sets a player's job.
+		parameters:
+			(player) player to set the job of.
+			(string) job (e.g. 'taxi') or (nil) if none.
+		returns:
+			(bool) true if successful, false otherwise.
+	-->
+    <export function="setJob" />
+    
+    <!-- Gets a user option (globally for that user - not per character).
+		parameters:
+			(player) player to get the option from.
+			(string) name of the option.
+		returns:
+			the option if successful, (nil) otherwise.
+	-->
+    <export function="getOption" />
+    
+    <!-- Sets a user option (globally for that user - not per character).
+		parameters:
+			(player) player to set the option for.
+			(string) name of the option.
+			(string/number/bool/nil) value of the option.
+		returns:
+			(bool) true if successful, false otherwise.
+	-->
+    <export function="setOption" />
+    
+    <script src="ids.lua" />
+    
+    <!-- resolves an ID/name/name part into a player element
+		parameters:
+			(player) the player who wants to resolve the ID. It'll show "Not logged in" etc. messages to this player. (nil) to show no messages.
+			(number) player id or (string) full player name or (string) part of player name
+			(bool) ignore login state - if this is set to true, even a not logged in player might be returned (/kick uses this, for example), if set to false an error message will show if the player is not logged in. Default: false.
+		returns:
+			(player) The player matching your search if exactly one player is found, (nil) otherwise.
+	-->
+    <export function="getFromName" />
+    
+    <!-- retrieves the ID of a player within the range from 1 to (max. number of slots).
+		parameters:
+			(player) player id of whom to get the ID.
+		returns:
+			(number) the ID of the player, (nil) if no ID is assigned.
+	-->
+    <export function="getID" />
+    
+    <include resource="sql" />
+    <include resource="gui" />
+    
+    <script src="language_g.lua" />
+    <script src="language_g.lua" type="client" size="1467" />
+    <script src="language.lua" />
+    
+    <!-- Returns a { language name, shortcut } table for all languages
+		returns:
+			(table) with all languages
+	-->
+    <export function="getLanguages" />
+    <export function="getLanguages" type="client" />
+    
+    <!-- Returns whetever a flag is valid.
+		parameters:
+			(string) flag.
+		returns:
+			(bool) true if valid, false otherwise.
+	-->
+    <export function="isValidLanguage" />
+    <export function="isValidLanguage" type="client" />
+    
+    <!-- Returns the full name of a language.
+		parameters:
+			(string) flag.
+		returns:
+			(string) full name if valid, (bool) false otherwise.
+	-->
+    <export function="getLanguageName" />
+    <export function="getLanguageName" type="client" />
+    
+    <!-- Returns the player's current language.
+		parameters:
+			(player) the player to retrieve the language of.
+		returns:
+			(string) language's flag if any, (nil) otherwise.
+	-->
+    <export function="getCurrentLanguage" />
+    
+    <!-- Returns the player's skill for a language.
+		parameters:
+			(player) the player to retrieve the language skill from.
+			(string) language to get the skill from.
+		returns:
+			(number) 0-1000 for any skill, (false) if he doesn't speak the language.
+	-->
+    <export function="getLanguageSkill" />
+    
+    <!-- Increases a player's language skill.
+		parameters:
+			(player) the player to increase the language skill for.
+			(string) language to increase the skill for.
+		returns:
+			(bool) true if successful, false otherwise.
+	-->
+    <export function="increaseLanguageSkill" />
+    <export function="increaseLanguageSkill2" />
+    
+    
+    <!-- Learn a player a language.
+		parameters:
+			(player) the player to learn the language.
+			(string) language to learn.
+		returns:
+			(bool) true if successful, false otherwise.
+			(number) error code if failed.
+				1 - Invalid Language.
+				2 - Player does speak the language already.
+				3 - Player exceeded maximum amount of languages.
+				4 - MySQL-Error.
+	-->
+    <export function="learnLanguage" />
+    
+    <file src="images/flags/ar.png" />
+    <file src="images/flags/cn.png" />
+    <file src="images/flags/de.png" />
+    <file src="images/flags/en.png" />
+    <file src="images/flags/es.png" />
+    <file src="images/flags/fi.png" />
+    <file src="images/flags/fr.png" />
+    <file src="images/flags/gr.png" />
+    <file src="images/flags/in.png" />
+    <file src="images/flags/il.png" />
+    <file src="images/flags/it.png" />
+    <file src="images/flags/jp.png" />
+    <file src="images/flags/kr.png" />
+    <file src="images/flags/ma.png" />
+    <file src="images/flags/nl.png" />
+    <file src="images/flags/pl.png" />
+    <file src="images/flags/pt.png" />
+    <file src="images/flags/ru.png" />
+    <file src="images/flags/se.png" />
+    <file src="images/flags/vn.png" />
+</meta>

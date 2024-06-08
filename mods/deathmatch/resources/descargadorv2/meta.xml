@@ -1,0 +1,182 @@
+<meta>
+    <info author="Sasuke* y Jefferson" type="script" name="Mod downloader para FCRP" version="1" />
+    
+    <script src="client.lua" type="client" size="8144" />
+    <script src="client-obl.lua" type="client" size="3327" />
+    <script src="mods.lua" type="server" />
+    
+    <download_priority_group>1</download_priority_group>
+    
+    <!-- Descargas OBLIGATORIAS 
+	 LISTADO DE MODS OBLIGATORIOS PARA EL JUGADOR:
+	 ID 88 PERRO 1
+	 ID 89 PERRO 2
+	 ID 243 PERRO 3
+	 ID 244 PERRO 4
+	 ID 252 PERRO 5
+	 ID 279 TRAJE BUZO
+	 ID 431 BUS
+	 ID 525 GRUA CON COLOR
+	 ID 578 DFT-30 ES GRUA NUEVA
+	 ID 604 PATRULLA 5 SUSTITUYE AL DAMAGED GLENDALE, POR ESO ES OBLIGATORIO
+	 ID 9 Uniforme PD Femenino
+	 ID 278 Uniforme MD Femenino
+	 ID 416 AMBULANCIA LOW POLY
+	 ID 508 CARAVANA ENTRABLE
+	-->
+    
+    <file src="mods/Mascotas/88.txd" />
+    <file src="mods/Mascotas/88.dff" />
+    
+    <file src="mods/Mascotas/89.txd" />
+    <file src="mods/Mascotas/89.dff" />
+    
+    <file src="mods/Mascotas/243.txd" />
+    <file src="mods/Mascotas/243.dff" />
+    
+    <file src="mods/Mascotas/244.txd" />
+    <file src="mods/Mascotas/244.dff" />
+    
+    <file src="mods/Mascotas/252.txd" />
+    <file src="mods/Mascotas/252.dff" />
+    
+    <file src="mods/Skins/279.txd" />
+    <file src="mods/Skins/279.dff" />
+    
+    <file src="mods/Vehs Facciones/431.txd" />
+    <file src="mods/Vehs Facciones/431.dff" />
+    
+    <file src="mods/Vehs Facciones/525.txd" />
+    <file src="mods/Vehs Facciones/525.dff" />
+    
+    <file src="mods/Vehs Facciones/578.txd" />
+    <file src="mods/Vehs Facciones/578.dff" />
+    
+    <file src="mods/Vehs Facciones/604.txd" />
+    <file src="mods/Vehs Facciones/604.dff" />
+    
+    <file src="mods/Vehs Facciones/416.txd" />
+    <file src="mods/Vehs Facciones/416.dff" />
+    
+    <file src="mods/Skins/9.txd" />
+    <file src="mods/Skins/9.dff" />
+    
+    <file src="mods/Skins/10.txd" />
+    <file src="mods/Skins/10.dff" />
+    
+    <file src="mods/Skins/278.txd" />
+    <file src="mods/Skins/278.dff" />
+    
+    <!-- SKINS -->
+    
+    <file src="mods/Skins/uniforme pd swat.txd" download="false" />
+    <file src="mods/Skins/uniforme pd swat.dff" download="false" />
+    
+    <file src="mods/Skins/uniforme pd masculino.txd" download="false" />
+    <file src="mods/Skins/uniforme pd masculino.dff" download="false" />
+    
+    <file src="mods/Skins/uniforme sheriff 1.txd" download="false" />
+    <file src="mods/Skins/uniforme sheriff 1.dff" download="false" />
+    
+    <file src="mods/Skins/uniforme pd negro.txd" download="false" />
+    <file src="mods/Skins/uniforme pd negro.dff" download="false" />
+    
+    <file src="mods/Skins/uniforme sheriff 2.txd" download="false" />
+    <file src="mods/Skins/uniforme sheriff 2.dff" download="false" />
+    
+    <file src="mods/Vehs Facciones/ambulancia.txd" download="false" />
+    <file src="mods/Vehs Facciones/ambulancia.dff" download="false" />
+    
+    <file src="mods/Vehs Facciones/camion bomberos.txd" download="false" />
+    <file src="mods/Vehs Facciones/camion bomberos.dff" download="false" />
+    
+    <file src="mods/Vehs Facciones/patrulla 1.txd" download="false" />
+    <file src="mods/Vehs Facciones/patrulla 1.dff" download="false" />
+    
+    <file src="mods/Vehs Facciones/patrulla 2.txd" download="false" />
+    <file src="mods/Vehs Facciones/patrulla 2.dff" download="false" />
+    
+    <file src="mods/Vehs Facciones/patrulla 3.txd" download="false" />
+    <file src="mods/Vehs Facciones/patrulla 3.dff" download="false" />
+    
+    <file src="mods/Vehs Facciones/patrulla 4.txd" download="false" />
+    <file src="mods/Vehs Facciones/patrulla 4.dff" download="false" />
+    
+    <file src="mods/Vehs Facciones/fbi rancher.txd" download="false" />
+    <file src="mods/Vehs Facciones/fbi rancher.dff" download="false" />
+    
+    <file src="mods/Vehs Facciones/servicios municipales.txd" download="false" />
+    <file src="mods/Vehs Facciones/servicios municipales.dff" download="false" />
+    
+    <file src="mods/Vehs Facciones/taxi.txd" download="false" />
+    <file src="mods/Vehs Facciones/taxi.dff" download="false" />
+    
+    <!-- Vehículos LowPoly -->
+    
+    <file src="mods/Vehs LowPoly/journey.txd" />
+    <file src="mods/Vehs LowPoly/journey.dff" />
+    
+    <file src="mods/Vehs LowPoly/buffalo.txd" download="false" />
+    <file src="mods/Vehs LowPoly/buffalo.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/burrito.txd" download="false" />
+    <file src="mods/Vehs LowPoly/burrito.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/caravana.txd" download="false" />
+    <file src="mods/Vehs LowPoly/caravana.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/elegant.txd" download="false" />
+    <file src="mods/Vehs LowPoly/elegant.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/club.txd" download="false" />
+    <file src="mods/Vehs LowPoly/club.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/cadrona.txd" download="false" />
+    <file src="mods/Vehs LowPoly/cadrona.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/wayfarer.txd" download="false" />
+    <file src="mods/Vehs LowPoly/wayfarer.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/freeway.txd" download="false" />
+    <file src="mods/Vehs LowPoly/freeway.dff" download="false" />
+    
+    
+    <file src="mods/Vehs LowPoly/comet.txd" download="false" />
+    <file src="mods/Vehs LowPoly/comet.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/faggio.txd" download="false" />
+    <file src="mods/Vehs LowPoly/faggio.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/huntley.txd" download="false" />
+    <file src="mods/Vehs LowPoly/huntley.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/landstalker.txd" download="false" />
+    <file src="mods/Vehs LowPoly/landstalker.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/merit.txd" download="false" />
+    <file src="mods/Vehs LowPoly/merit.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/premier.txd" download="false" />
+    <file src="mods/Vehs LowPoly/premier.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/sentinel.txd" download="false" />
+    <file src="mods/Vehs LowPoly/sentinel.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/stafford.txd" download="false" />
+    <file src="mods/Vehs LowPoly/stafford.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/super gt.txd" download="false" />
+    <file src="mods/Vehs LowPoly/super gt.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/washington.txd" download="false" />
+    <file src="mods/Vehs LowPoly/washington.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/windsor.txd" download="false" />
+    <file src="mods/Vehs LowPoly/windsor.dff" download="false" />
+    
+    <file src="mods/Vehs LowPoly/zr-350.txd" download="false" />
+    <file src="mods/Vehs LowPoly/zr-350.dff" download="false" />
+    
+    
+    <min_mta_version server="1.5" />
+</meta>

@@ -1,0 +1,35 @@
+<!--
+Copyright (c) 2010 MTA: Paradise
+Copyright (c) 2020 DownTown RolePlay
+Copyright (c) 2016 DownTown County Roleplay
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+<meta>
+    <script src="startup.lua" />
+    <script src="startup.lua" type="client" size="2104" />
+    <export function="getVersion" />
+    <export function="getVersion" type="client" />
+    
+    <script src="credits_c.lua" type="client" size="1476" />
+    
+    <!-- outputs a message to the console and (if running) irc.
+		parameters:
+			(string) text to send
+	-->
+    <export function="message" />
+    <export function="aviso" />
+    
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

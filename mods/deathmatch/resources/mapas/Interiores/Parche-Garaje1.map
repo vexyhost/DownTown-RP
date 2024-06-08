@@ -1,0 +1,6 @@
+<map edf:definitions="editor_main">
+    <object id="object (kmb_container_blue) (1)" breakable="true" interior="1" alpha="255" model="2932" doublesided="false" scale="1" dimension="-1" posX="602.09998" posY="-9.3" posZ="1001.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (kmb_container_blue) (2)" breakable="true" interior="1" alpha="255" model="2932" doublesided="false" scale="1" dimension="-1" posX="602.09998" posY="-11.3" posZ="1001.3" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (kmb_container_blue) (3)" breakable="true" interior="1" alpha="255" model="2932" doublesided="false" scale="1" dimension="-1" posX="602.09998" posY="-8.2" posZ="1004.5" rotX="0" rotY="0" rotZ="0"></object>
+    <object id="object (kmb_container_blue) (4)" breakable="true" interior="1" alpha="255" model="2932" doublesided="false" scale="1" dimension="-1" posX="602.09998" posY="-12" posZ="1004.2" rotX="0" rotY="0" rotZ="0"></object>
+</map>

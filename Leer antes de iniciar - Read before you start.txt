@@ -1,0 +1,20 @@
+=============
+   Español
+=============
+
+Si tu servidor no inicia, probablemente olvidaste seguir algún paso del tutorial: https://help.vexyhost.com/mta-sa/downtown
+Asegúrate de seguir cada paso como se indica antes de iniciar el servidor.
+
+En esta versión de MTA 1.6 es posible que algunas funciones, scripts o resources no funcionen como se esperaba debido a la antiguedad de la gamemode, DownTown RP originalmente fue creado para la version de MTA 1.5.8, esto tiene varios años sin actualizar.
+
+=============
+   English
+=============
+
+If your server won't start, you probably forgot to follow one of the steps in the tutorial: https://help.vexyhost.com/mta-sa/downtown
+Be sure to follow each step as instructed before starting the server.
+
+In this version of MTA 1.6 it is possible that some functions, scripts or resources may not work as expected due to the age of the gamemode, DownTown RP was originally created for MTA version 1.5.8, this is several years old and has not been updated.
+
+
+VexyHost - https://vexyhost.com/mta-sa (MTA:SA Hosting)

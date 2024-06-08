@@ -1,0 +1,42 @@
+<meta>
+    <info author="Jefferson" type="script" description="Sistema HUD" />
+    
+    <script src="c_hud.lua" type="client" size="7174" />
+    <script src="c_nametags.lua" type="client" size="17972" />
+    <script src="chat_bubbles.lua" type="server" />
+    
+    <file src="images/hud/window2.png" />
+    <file src="images/hud/speed120.png" />
+    <file src="images/hud/speed90.png" />
+    <file src="images/hud/highway.png" />
+    <file src="images/hud/fuel.png" />
+    <file src="images/hud/fuel2.png" />
+    <file src="images/hud/accident.png" />
+    
+    <file src="images/hud/console.png" />
+    <file src="images/hud/cinturon.png" />
+    <file src="images/hud/siren.png" />
+    <file src="images/hud/window.png" />
+    <file src="images/hud/helmet.png" />
+    <file src="images/hud/mask.png" />
+    <file src="images/hud/gasmask.png" />
+    <file src="images/hud/scuba.png" />
+    <file src="images/hud/badge1.png" />
+    <file src="images/hud/badge2.png" />
+    <file src="images/hud/cigarette.png" />
+    <file src="images/hud/armour.png" />
+    <file src="images/hud/bleeding.png" />
+    <file src="images/hud/lowhp.png" />
+    <file src="images/hud/helper.png" />
+    <file src="images/hud/dev.png" />
+    
+    <file src="images/hud/dglock.png" />
+    <file src="images/hud/dradar.png" />
+    <file src="images/hud/dtazer.png" />
+    <file src="images/hud/shotbean.png" />
+    <file src="images/hud/shotlethal.png" />
+    <file src="images/hud/chat.png" />
+    
+    <file src="images/hud/gm.png" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

@@ -1,0 +1,15 @@
+<meta>
+    <info author="Javier" description="A handler resource to account for common uses for voice support" type="utility" version="1.1.0" />
+    
+    <script src="cDrawIcon.lua" type="client" size="2968" />
+    <script src="cMisFrecuencias.lua" type="client" size="12374" />
+    
+    <file src="images/voice.png" />
+    <file src="images/voice_small.png" />
+    <file src="images/voice_small_muted.png" />
+    
+    
+    <script src="sMisFrecuencias.lua" type="server" />
+    
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

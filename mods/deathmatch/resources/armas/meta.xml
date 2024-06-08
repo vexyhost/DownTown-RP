@@ -1,0 +1,37 @@
+<meta>
+    <info author="Jefferson" name="Sistema de Armas de DCRP" type="script" version="1.3" />
+    <script src="dararma.lua" />
+    <script src="armas.lua" />
+    <script src="armas_suelo.lua" />
+    
+    <script src="armasmod_c.lua" type="client" size="1137" />
+    <file src="Armas/22.txd" />
+    <file src="Armas/22.dff" />
+    <file src="Armas/24.txd" />
+    <file src="Armas/24.dff" />
+    <file src="Armas/31.txd" />
+    <file src="Armas/31.dff" />
+    <file src="Armas/29.txd" />
+    <file src="Armas/29.dff" />
+    <file src="Armas/34.txd" />
+    <file src="Armas/34.dff" />
+    
+    <script src="sonidos_c.lua" type="client" size="3822" />
+    <file src="Sonidos/AK-47.mp3" />
+    <file src="Sonidos/Colt45.mp3" />
+    <file src="Sonidos/Deagle.mp3" />
+    <file src="Sonidos/Silenced.mp3" />
+    <file src="Sonidos/Shotgun.mp3" />
+    <file src="Sonidos/Sawed-Off.mp3" />
+    <file src="Sonidos/Combat Shotgun.mp3" />
+    <file src="Sonidos/UZI.mp3" />
+    <file src="Sonidos/tec9.mp3" />
+    <file src="Sonidos/MP5.mp3" />
+    <file src="Sonidos/M4.mp3" />
+    <file src="Sonidos/Rifle.mp3" />
+    <file src="Sonidos/Sniper.mp3" />
+    <file src="Sonidos/Tazer.wav" />
+    <file src="Sonidos/beanbag.mp3" />
+    
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

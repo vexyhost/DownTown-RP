@@ -1,0 +1,7 @@
+<meta>
+    <info author="Jefferson" type="script" description="Sistema de licencias" />
+    
+    <script src="server.lua" type="server" />
+    <script src="client.lua" type="client" size="20116" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

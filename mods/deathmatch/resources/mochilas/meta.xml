@@ -1,0 +1,12 @@
+<meta>
+    <script src="mochila.lua" type="client" size="886" />
+    <file src="Mochilas/small.txd" />
+    <file src="Mochilas/small.dff" />
+    <file src="Mochilas/alice.txd" />
+    <file src="Mochilas/alice.dff" />
+    <file src="Mochilas/coyote.txd" />
+    <file src="Mochilas/coyote.dff" />
+    <file src="Mochilas/czech.txd" />
+    <file src="Mochilas/czech.dff" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

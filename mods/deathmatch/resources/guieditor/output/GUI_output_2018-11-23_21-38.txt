@@ -1,0 +1,78 @@
+
+vAsistenciaGeneral = guiCreateWindow(527, 291, 867, 530, "Panel de asistencia general - DownTown RolePlay", false)
+guiWindowSetSizable(vAsistenciaGeneral, false)
+
+tabPanelAsist = guiCreateTabPanel(20, 34, 825, 475, false, vAsistenciaGeneral)
+
+tabInicio = guiCreateTab("Inicio", tabPanelAsist)
+
+lInicioPanel = guiCreateLabel(31, 25, 760, 85, "Bienvenid@ al panel de asistencia general de DownTown RolePlay. Desde aquí podrás ver los conceptos de rol, los comandos del servidor, reportar a jugadores, ¡y muchos trámites más!\n\nSelecciona una categoría (ej. Comandos) para obtener más información. En caso de cualquier problema, siempre puedes dirigirte a un staff vía IG mediante /staff o vía IG y web a través del CAU.", false, tabInicio)
+guiLabelSetHorizontalAlign(lInicioPanel, "left", true)
+
+tabComandos = guiCreateTab("Comandos", tabPanelAsist)
+
+lComandos = guiCreateLabel(31, 18, 747, 23, "Selecciona una categoría para ver los comandos, así como una breve explicación.", false, tabComandos)
+guiLabelSetHorizontalAlign(lComandos, "left", true)
+gridComandos = guiCreateGridList(29, 48, 218, 377, false, tabComandos)
+guiGridListAddColumn(gridComandos, "Categoría", 0.9)
+for i = 1, 7 do
+    guiGridListAddRow(gridComandos)
+end
+guiGridListSetItemText(gridComandos, 0, 1, "-", false, false)
+guiGridListSetItemText(gridComandos, 1, 1, "-", false, false)
+guiGridListSetItemText(gridComandos, 2, 1, "Facciones", false, false)
+guiGridListSetItemText(gridComandos, 3, 1, "General", false, false)
+guiGridListSetItemText(gridComandos, 4, 1, "Interiores", false, false)
+guiGridListSetItemText(gridComandos, 5, 1, "Otros Comandos", false, false)
+guiGridListSetItemText(gridComandos, 6, 1, "Vehículos", false, false)
+memoComandos = guiCreateMemo(257, 50, 545, 375, "\n", false, tabComandos)
+guiMemoSetReadOnly(memoComandos, true)
+
+tabCAU = guiCreateTab("Reportes", tabPanelAsist)
+
+lCAU = guiCreateLabel(18, 13, 764, 61, "Esto es el CAU, Centro de Atención al Usuario. La mayoría de trámites pasarán por el CAU, y sirve para tener todo en orden: reportes, quejas, incidencias, etc. Antes de abrir un caso, intenta resolverlo de forma IG mediante /duda.\n\nSelecciona una opción de la lista para continuar.", false, tabCAU)
+guiLabelSetHorizontalAlign(lCAU, "left", true)
+gridCAU = guiCreateGridList(20, 80, 207, 328, false, tabCAU)
+guiGridListAddColumn(gridCAU, "CAU", 0.9)
+for i = 1, 3 do
+    guiGridListAddRow(gridCAU)
+end
+guiGridListSetItemText(gridCAU, 0, 1, "Abrir nuevo caso", false, false)
+guiGridListSetItemText(gridCAU, 1, 1, "Consultar mis casos abiertos", false, false)
+guiGridListSetItemText(gridCAU, 2, 1, "Consultar mis casos cerrados", false, false)
+
+tabOGestiones = guiCreateTab("Otras gestiones", tabPanelAsist)
+
+lGestiones = guiCreateLabel(18, 16, 776, 38, "Desde aquí obtendrás información sobre cómo realizar ciertas gestiones administrativas: eliminar personajes, cambiar contraseñas, entre otros. \nSimplemente selecciona un trámite para obtener información.", false, tabOGestiones)
+guiLabelSetHorizontalAlign(lGestiones, "left", true)
+gridGestiones = guiCreateGridList(22, 58, 177, 254, false, tabOGestiones)
+guiGridListAddColumn(gridGestiones, "Listado de trámites", 0.9)
+for i = 1, 13 do
+    guiGridListAddRow(gridGestiones)
+end
+guiGridListSetItemText(gridGestiones, 0, 1, "Cambiar mi clave", false, false)
+guiGridListSetItemText(gridGestiones, 1, 1, "Anular un préstamo", false, false)
+guiGridListSetItemText(gridGestiones, 2, 1, "Reportar un fallo", false, false)
+guiGridListSetItemText(gridGestiones, 3, 1, "Reportar un usuario", false, false)
+guiGridListSetItemText(gridGestiones, 4, 1, "Reportar un staff", false, false)
+guiGridListSetItemText(gridGestiones, 5, 1, "Solicitar un mapa", false, false)
+guiGridListSetItemText(gridGestiones, 6, 1, "Solicitar una facción", false, false)
+guiGridListSetItemText(gridGestiones, 7, 1, "Mejorar mi garaje", false, false)
+guiGridListSetItemText(gridGestiones, 8, 1, "Eliminar mi personaje", false, false)
+guiGridListSetItemText(gridGestiones, 9, 1, "Eliminar mi cuenta", false, false)
+guiGridListSetItemText(gridGestiones, 10, 1, "Vincular mi TS3", false, false)
+guiGridListSetItemText(gridGestiones, 11, 1, "No aparece lo que busco", false, false)
+guiGridListSetItemText(gridGestiones, 12, 1, "Modificar mi personaje", false, false)
+
+tabPregFrecuentes = guiCreateTab("Preguntas frecuentes", tabPanelAsist)
+
+lTabFrecuentes = guiCreateLabel(21, 18, 779, 42, "En muchas ocasiones, una pregunta la tienen muchos usuarios. Si tienes una pregunta, consulta primero si está aqui.", false, tabPregFrecuentes)
+
+tabPrimerosPasos = guiCreateTab("Soy nuevo. Primeros pasos.", tabPanelAsist)
+tabConceptos = guiCreateTab("Conceptos de rol", tabPanelAsist)
+
+lConceptos = guiCreateLabel(33, 18, 757, 35, "Desde aquí podrás consultar todos los conceptos de rol, así como ejemplos de cada uno.", false, tabConceptos)
+guiLabelSetHorizontalAlign(lConceptos, "left", true)
+
+
+bCerrar = guiCreateButton(762, 24, 83, 28, "Cerrar", false, vAsistenciaGeneral)

@@ -1,0 +1,51 @@
+
+barreraP1PCMG = createObject ( 968, 2070.8999, 41.7, 26.18, 0, 90, 88 )
+markerP1PCMG = createMarker (2082.72, 44.7, 26.34, "cylinder", 4.5, 255, 0, 0, 0 )
+esbarP1PCMG = 0
+
+function toggleBarreraP1PCMG(element)
+	if getElementType(element) == "vehicle" then
+		player = getVehicleController(element)
+	else
+		player = element
+	end
+	if exports.players:takeMoney(player, 5) then
+		if esbarP1PCMG == 0 then
+			exports.chat:me( player, "abona el peaje y le abren la barrera." )
+			moveObject ( barreraP1PCMG, 1200, 2070.8999, 41.7, 26.18, 0, -90, 0)
+			esbarP1PCMG = 1
+			setTimer( function () 
+			moveObject ( barreraP1PCMG, 1200, 2070.8999, 41.7, 26.18, 0, 90, 0)
+			end, 5000, 1, player)
+			setTimer( function () 
+			esbarP1PCMG = 0 end, 6300, 1, player)
+		end
+	end
+end
+addEventHandler("onMarkerHit", markerP1PCMG, toggleBarreraP1PCMG)
+
+
+barreraP2PCMG = createObject ( 968, 2070.8999, 41.7, 26.12, 0, 270, 87.995 )
+markerP2PCMG = createMarker ( 2062, 37.5, 26.72, "cylinder", 4.5, 255, 0, 0, 0 )
+esbarP2PCMG = 0
+
+function toggleBarreraP2PCMG(element)
+	if getElementType(element) == "vehicle" then
+		player = getVehicleController(element)
+	else
+		player = element
+	end
+	if exports.players:takeMoney(player, 5) then
+		if esbarP2PCMG == 0 then
+			exports.chat:me( player, "abona el peaje y le abren la barrera." )
+			moveObject ( barreraP2PCMG, 1200, 2070.8999, 41.7, 26.18, 0, 90, 0)
+			esbarP2PCMG = 1
+			setTimer( function () 
+			moveObject ( barreraP2PCMG, 1200, 2070.8999, 41.7, 26.18, 0, -90, 0)
+			end, 5000, 1, player)
+			setTimer( function () 
+			esbarP2PCMG = 0 end, 6300, 1, player)
+		end
+	end
+end
+addEventHandler("onMarkerHit", markerP2PCMG, toggleBarreraP2PCMG)

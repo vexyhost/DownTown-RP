@@ -1,0 +1,35 @@
+<meta>
+    <info name="Shops Facciones Ilegales Oficiales" author="FrankGT" description="" version="0.0.1" type="script"></info>
+    <script src="drogas_c.lua" type="client" size="4872"></script>
+    <script src="drogas.lua" type="server"></script>
+    <script src="armas_c.lua" type="client" size="4924"></script>
+    <script src="armas.lua" type="server"></script>
+    
+    
+    <file src="imagenesD/hachi.png" />
+    <file src="imagenesD/maria.png" />
+    <file src="imagenesD/lsd.png" />
+    <file src="imagenesD/heroina.png" />
+    <file src="imagenesD/cocaina.png" />
+    <file src="imagenesD/setas.png" />
+    <file src="imagenesD/meta.png" />
+    <file src="imagenesD/speed.png" />
+    <file src="imagenesD/extasis.png" />
+    <file src="imagenesD/anfetas.png" />
+    <file src="imagenesD/logodrogas.png" />
+    
+    
+    <file src="imagenesA/28.png" />
+    <file src="imagenesA/22.png" />
+    <file src="imagenesA/23.png" />
+    <file src="imagenesA/34.png" />
+    <file src="imagenesA/33.png" />
+    <file src="imagenesA/8.png" />
+    <file src="imagenesA/18.png" />
+    <file src="imagenesA/30.png" />
+    <file src="imagenesA/26.png" />
+    <file src="imagenesA/32.png" />
+    <file src="imagenesA/logoarmas.png" />
+    
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

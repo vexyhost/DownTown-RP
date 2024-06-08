@@ -1,0 +1,6 @@
+<meta>
+    <info author="Jefferson" name="Sistema de Préstamos para Vehículos y Casas." version="1.2" type="script" />
+    <export function="crearPrestamo" />
+    <export function="pagarPrestamoSinQuitarDinero" />
+    <script src="server.lua" type="server" />
+</meta>

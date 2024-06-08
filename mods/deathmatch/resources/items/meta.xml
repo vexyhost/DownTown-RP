@@ -1,0 +1,313 @@
+<!--
+Copyright (c) 2010 MTA: Paradise
+Copyright (c) 2020 DownTown RolePlay
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+
+Copyright (c) 2014 Bone County Roleplay.
+Este script no es libre, y, por tanto, no puede ser utilizado públicamente
+ni privadamente, a menos que se obtenga una autorización de:
+Jefferson - Developer de Bone County Roleplay.
+MFOscar - Developer de Bone County Roleplay.
+Andrew - Administrador de Bone County Roleplay.
+Debido a la protección del archivo, la utilización de éste script sin autorización,
+puede causar daños en el servidor, emulador, o similares, en cuyo caso la responsabilidad
+nunca recaerá sobre Jefferson, MFOscar, Andrew, Bone County Roleplay, 
+y/o parte del equipo administrativo. Script realizado por Jefferson.
+
+
+-->
+<meta>
+    <!-- What is an "item"?
+		
+		An item is a combination of four values in a table, namely:
+			(number) index - The index in the database. This is unique.
+			(number) item id - the item it refers to (1 = Vehicle key, 2 = House key, ...)
+			(number/string) value - the value of the item, that's what eventually determines what will happen exactly. For example for Food, value is the health given when you eat it. Keys have the house/vehicle ID as value.
+			(string) name - a string with the custom name, (nil) otherwise
+	-->
+    <export function="actualizarPosicion" />
+    
+    <script src="items_list.lua" />
+    <script src="items_list.lua" type="client" size="9983" />
+    
+    <script src="drogas_c.lua" type="client" size="6482" />
+    
+    <!-- Returns the name associated to an Item ID.
+		parameters:
+			(number) ID of the Item.
+		returns:
+			(string) The name of the item, "" for none.
+	-->
+    <export function="getName" />
+    <export function="getName" type="client" />
+    
+    <!-- Returns the description for an Item ID.
+		parameters:
+			(number) ID of the Item.
+		returns:
+			(string) The description of the item, "" for none.
+	-->
+    <export function="getDescription" />
+    
+    <export function="getDescription" type="client" />
+    
+    <!-- Returns the image that should be used for an Item ID.
+		parameters:
+			(number) ID of the Item.
+			(number/string) value - the item's value.
+			(string) name - the name of the item if it uses a custom name.
+		returns:
+			(string) The image path of the item, (nil) for none.
+	-->
+    <export function="getImage" type="client" />
+    
+    <script src="items.lua" />
+    <script src="items_c.lua" type="client" size="8604" />
+    <!-- Returns all items for an element
+		parameters:
+			(element) element - the element to retrieve all items from.
+		returns:
+			(table) a table with all items if successful, (nil) otherwise.
+	-->
+    <export function="get" />
+    <export function="get" type="client" />
+    
+    <!-- Gives an element an item.
+		parameters:
+			(element) element - the element to give it to.
+			(number) item ID - the ID of the item.
+			(number/string) value - the item's value.
+		optional parameters:
+			(string) the name of the item, (nil) if the default name should be used.
+		returns:
+			(bool) true if successful, false otherwise.
+			(string) an error message if giving the element an item failed, (nil) if it was successful.
+	-->
+    <export function="give" />
+    
+    <!-- Takes an item from an element.
+		parameters:
+			(element) element - the element to take it from.
+			(number) slot - the slot the item was on before.
+		returns:
+			(bool) true if successful, false otherwise.
+			(string) an error message if giving the element an item failed, (nil) if it was successful.
+	-->
+    <export function="take" />
+    <export function="take2" />
+    
+    <!-- Checks whetever an element has an item.
+		parameters:
+			(element) element - the element to check.
+			(number) item ID - the ID of the item, (nil) to ignore this in your search.
+			(number/string) value - the item's value, (nil) to ignore this in your search.
+		optional parameters:
+			(string) the name of the item, (nil) if it has no custom name or if you want to ignore it.
+		returns:
+			if successful:
+				(bool) true.
+				(number) slot - the slot the item is saved in. (used for take())
+				(item) item - the item on that slot.
+			otherwise:
+				(bool) false.
+				(string) an error message if giving the element an item failed, (nil) if no error happened, just that the element did not have this item.
+	-->
+    <export function="has" />
+    <export function="hasPhone" />
+    <export function="has" type="client" />
+    
+    <export function="load" />
+    
+    <export function="getMochila" type="client" />
+    <script src="mochilas_suelo.lua" />
+    
+    <export function="guardarArmas" />
+    
+    <!-- Images for our inventory.
+		See items_list.lua for a nams => image lookup.
+	-->
+    <file src="images/1.png" />
+    <file src="images/2.png" />
+    <file src="images/3.png" />
+    <file src="images/4.png" />
+    <file src="images/7.png" />
+    <file src="images/9.png" />
+    <file src="images/13.png" />
+    <file src="images/14.png" />
+    <file src="images/15.png" />
+    <file src="images/16.png" />
+    <file src="images/17.png" />
+    <file src="images/18.png" />
+    <file src="images/19.png" />
+    <file src="images/20.png" />
+    <file src="images/21.png" />
+    <file src="images/22.png" />
+    <file src="images/23.png" />
+    <file src="images/24.png" />
+    <file src="images/25.png" />
+    <file src="images/26.png" />
+    <file src="images/28.png" />
+    <file src="images/30.png" />
+    <file src="images/32.png" />
+    <file src="images/33.png" />
+    <file src="images/34.png" />
+    <file src="images/36.png" />
+    <file src="images/37.png" />
+    <file src="images/38.png" />
+    <file src="images/39.png" />
+    <file src="images/40.png" />
+    <file src="images/41.png" />
+    <file src="images/42.png" />
+    <file src="images/44.png" />
+    <file src="images/45.png" />
+    <file src="images/46.png" />
+    
+    <file src="images/bs1.png" />
+    <file src="images/bs2.png" />
+    <file src="images/bs3.png" />
+    <file src="images/co0.png" />
+    <file src="images/co1.png" />
+    <file src="images/co2.png" />
+    <file src="images/co3.png" />
+    <file src="images/co4.png" />
+    <file src="images/co5.png" />
+    <file src="images/co6.png" />
+    <file src="images/co7.png" />
+    <file src="images/co8.png" />
+    <file src="images/co9.png" />
+    <file src="images/co10.png" />
+    <file src="images/co11.png" />
+    <file src="images/co12.png" />
+    <file src="images/co13.png" />
+    <file src="images/co14.png" />
+    <file src="images/cluckin1.png" />
+    <file src="images/cluckin2.png" />
+    <file src="images/cluckin3.png" />
+    <file src="images/hotdog.png" />
+    <file src="images/chocolate.png" />
+    <file src="images/fresa.png" />
+    <file src="images/vainilla.png" />
+    <file src="images/pizza1.png" />
+    <file src="images/pizza2.png" />
+    <file src="images/pizza3.png" />
+    <file src="images/ramen.png" />
+    <file src="images/salad.png" />
+    <file src="images/sprunk.png" />
+    <file src="images/beer.png" />
+    <file src="images/cerveza.png" />
+    <file src="images/champagne.png" />
+    <file src="images/champan.png" />
+    <file src="images/licor.png" />
+    <file src="images/martini.png" />
+    <file src="images/ron.png" />
+    <file src="images/scocht.png" />
+    <file src="images/vino.png" />
+    <file src="images/vodka.png" />
+    <file src="images/Whiskey.png" />
+    <file src="images/wine.png" />
+    <file src="images/wisky.png" />
+    <file src="images/cafe.png" />
+    
+    <file src="images/small.png" />
+    <file src="images/alice.png" />
+    <file src="images/czech.png" />
+    <file src="images/coyote.png" />
+    
+    <export function="quitarCasco" />
+    <export function="createHelmet" />
+    <export function="isTelefonoEncendido" />
+    
+    <file src="images/casco1.png" />
+    <file src="images/casco2.png" />
+    <file src="images/casco3.png" />
+    <file src="images/casco4.png" />
+    <file src="images/casco5.png" />
+    <file src="images/casco6.png" />
+    <file src="images/casco7.png" />
+    
+    <file src="images/armario.png" />
+    <file src="images/cama.png" />
+    <file src="images/silla.png" />
+    <file src="images/sofa.png" />
+    <file src="images/sillon.png" />
+    <file src="images/tv.png" />
+    <file src="images/lavadora.png" />
+    <file src="images/cuadro.png" />
+    <file src="images/estantetv.png" />
+    <file src="images/cajafuerte.png" />
+    <file src="images/wc.png" />
+    <file src="images/radio.png" />
+    <file src="images/telefono.png" />
+    <file src="images/extintor.png" />
+    
+    <file src="images/pd1.png" />
+    <file src="images/pd2.png" />
+    <file src="images/pd3.png" />
+    <file src="images/pd4.png" />
+    
+    <file src="images/w1.png" />
+    <file src="images/w2.png" />
+    <file src="images/w3.png" />
+    <file src="images/w4.png" />
+    <file src="images/w5.png" />
+    <file src="images/w6.png" />
+    <file src="images/w7.png" />
+    <file src="images/w8.png" />
+    <file src="images/w9.png" />
+    <file src="images/w10.png" />
+    <file src="images/w12.png" />
+    <file src="images/w14.png" />
+    <file src="images/w15.png" />
+    <file src="images/w16.png" />
+    <file src="images/w17.png" />
+    <file src="images/w18.png" />
+    <file src="images/w22.png" />
+    <file src="images/w23.png" />
+    <file src="images/w24.png" />
+    <file src="images/w25.png" />
+    <file src="images/w26.png" />
+    <file src="images/w27.png" />
+    <file src="images/w28.png" />
+    <file src="images/w29.png" />
+    <file src="images/w30.png" />
+    <file src="images/w31.png" />
+    <file src="images/w32.png" />
+    <file src="images/w33.png" />
+    <file src="images/w34.png" />
+    <file src="images/w37.png" />
+    <file src="images/w41.png" />
+    <file src="images/w42.png" />
+    <file src="images/w43.png" />
+    <file src="images/w44.png" />
+    <file src="images/w45.png" />
+    <file src="images/w46.png" />
+    
+    <file src="images/w22c.png" />
+    <file src="images/w23c.png" />
+    <file src="images/w24c.png" />
+    <file src="images/w25c.png" />
+    <file src="images/w26c.png" />
+    <file src="images/w27c.png" />
+    <file src="images/w28c.png" />
+    <file src="images/w29c.png" />
+    <file src="images/w30c.png" />
+    <file src="images/w31c.png" />
+    <file src="images/w32c.png" />
+    <file src="images/w33c.png" />
+    <file src="images/w34c.png" />
+    
+    <min_mta_version server="1.5.2-9.07903" client="1.5.2-9.07903"></min_mta_version>
+</meta>

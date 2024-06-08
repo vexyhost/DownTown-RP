@@ -1,0 +1,77 @@
+<!--
+Copyright (c) 2010 MTA: Paradise
+Copyright (c) 2020 DownTown RolePlay
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+<meta>
+    <script src="mysql.lua" />
+    
+    <export function="escape_string" />
+    
+    <!-- Use the functions below instead
+	<export function="query"/>
+	<export function="free_result"/>
+	-->
+    
+    <!-- Executes a MySQL query.
+		parameters:
+			(string) the query to execute. Can contain format options (%s, etc.)
+			(...) the format options. String will be automatically escaped.
+		returns:
+			(bool) true if successful, false otherwise.
+			(string) the MySQL error message if any error occured, (nil) otherwise.
+	-->
+    <export function="query_free" />
+    
+    <!-- Executes a MySQL query and returns the result of that query as table.
+		parameters:
+			(string) the query to execute. Can contain format options (%s, etc.)
+			(...) the format options. String will be automatically escaped.
+		returns:
+			(table) table with all columns and rows if successful, false otherwise.
+			(string) the MySQL error message if any error occured, (nil) otherwise.
+	-->
+    <export function="query_assoc" />
+    
+    <!-- Executes a MySQL query and returns the result of that query as a table, however limited to one row.
+		parameters:
+			(string) the query to execute. Can contain format options (%s, etc.)
+			(...) the format options. String will be automatically escaped.
+		returns:
+			(table) table with all columns if successful, false if there were no rows returned or an error happened.
+			(string) the MySQL error message if any error occured, (nil) otherwise.
+	-->
+    <export function="query_assoc_single" />
+    
+    <!-- Executes a MySQL query (INSERT) and returns the insert-id of the inserted row.
+		parameters:
+			(string) the query to execute. Can contain format options (%s, etc.)
+			(...) the format options. String will be automatically escaped.
+		returns:
+			(number) the ID of the row being inserted, (bool) false otherwise.
+			(string) the MySQL error message if any error occured, (nil) otherwise.
+	-->
+    <export function="query_insertid" />
+    
+    <!-- Executes a MySQL query and returns the number of affected rows.
+		parameters:
+			(string) the query to execute. Can contain format options (%s, etc.)
+			(...) the format options. String will be automatically escaped.
+		returns:
+			(number) the number of rows affected if successful, (bool) false otherwise.
+			(string) the MySQL error message if any error occured, (nil) otherwise.
+	-->
+    <export function="query_affected_rows" />
+</meta>

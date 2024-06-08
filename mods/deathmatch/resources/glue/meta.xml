@@ -1,0 +1,6 @@
+<meta>
+    <info author="uPrell" name="glue" version="1.0" type="script" />
+    <script src="glue.lua" type="client" size="4914" />
+    <script src="glueS.lua" type="server" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

@@ -1,0 +1,6 @@
+<meta>
+    <info author="KWKSND" version="1.0" type="script" name="Fireworks Truck" />
+    <script src="KWKFireworksTruckCL.lua" type="client" size="2357" />
+    <script src="KWKFireworksTruck.lua" type="server" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

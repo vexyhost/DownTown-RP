@@ -1,0 +1,73 @@
+<meta>
+    <info author="Jefferson" type="script" name="Sistemas de casino" version="1.0 ALPHA" />
+    <!-- Scripts de máquinas tragaperras -->
+    <file src="img/drum.png" type="client" />
+    <file src="img/cards.png" type="client" />
+    
+    <file src="slotMachineCards/bell.png" type="client" />
+    <file src="slotMachineCards/cherry.png" type="client" />
+    <file src="slotMachineCards/diamond.png" type="client" />
+    <file src="slotMachineCards/emerald.png" type="client" />
+    <file src="slotMachineCards/goldbar.png" type="client" />
+    <file src="slotMachineCards/goldclover.png" type="client" />
+    <file src="slotMachineCards/goldenseven.png" type="client" />
+    <file src="slotMachineCards/grape.png" type="client" />
+    <file src="slotMachineCards/greenbar.png" type="client" />
+    <file src="slotMachineCards/greenclover.png" type="client" />
+    <file src="slotMachineCards/heart.png" type="client" />
+    <file src="slotMachineCards/horseshoe.png" type="client" />
+    <file src="slotMachineCards/lemon.png" type="client" />
+    <file src="slotMachineCards/plum.png" type="client" />
+    <file src="slotMachineCards/redbar.png" type="client" />
+    <file src="slotMachineCards/redseven.png" type="client" />
+    <file src="slotMachineCards/ruby.png" type="client" />
+    <file src="slotMachineCards/watermelon.png" type="client" />
+    <file src="sounds/jackpot.ogg" type="client" />
+    <file src="font/Roboto.ttf" type="client" />
+    
+    <script src="slotmachine_s.lua" type="server" />
+    <script src="slotmachine_c.lua" type="client" size="22547" />
+    
+    <!-- Scripts de mesas de poker -->
+    
+    <file src="images/cards/black/2_b.png" />
+    <file src="images/cards/black/3_b.png" />
+    <file src="images/cards/black/4_b.png" />
+    <file src="images/cards/black/5_b.png" />
+    <file src="images/cards/black/6_b.png" />
+    <file src="images/cards/black/7_b.png" />
+    <file src="images/cards/black/8_b.png" />
+    <file src="images/cards/black/9_b.png" />
+    <file src="images/cards/black/10_b.png" />
+    <file src="images/cards/black/a_b.png" />
+    <file src="images/cards/black/j_b.png" />
+    <file src="images/cards/black/q_b.png" />
+    <file src="images/cards/black/k_b.png" />
+    <file src="images/cards/red/2_r.png" />
+    <file src="images/cards/red/3_r.png" />
+    <file src="images/cards/red/4_r.png" />
+    <file src="images/cards/red/5_r.png" />
+    <file src="images/cards/red/6_r.png" />
+    <file src="images/cards/red/7_r.png" />
+    <file src="images/cards/red/8_r.png" />
+    <file src="images/cards/red/9_r.png" />
+    <file src="images/cards/red/10_r.png" />
+    <file src="images/cards/red/a_r.png" />
+    <file src="images/cards/red/j_r.png" />
+    <file src="images/cards/red/q_r.png" />
+    <file src="images/cards/red/k_r.png" />
+    <file src="images/cards/symbols/herz.png" />
+    <file src="images/cards/symbols/karo.png" />
+    <file src="images/cards/symbols/kreuz.png" />
+    <file src="images/cards/symbols/pik.png" />
+    <file src="images/cards/images/bg.png" />
+    <file src="images/cards/images/j.png" />
+    <file src="images/cards/images/k.png" />
+    <file src="images/cards/images/q.png" />
+    
+    <script src="poker_client.lua" type="client" size="16959" />
+    <script src="poker_settings.lua" type="client" size="8016" />
+    <script src="poker_settings.lua" type="server" />
+    <script src="poker_server.lua" type="server" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

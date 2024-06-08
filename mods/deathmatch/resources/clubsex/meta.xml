@@ -1,0 +1,60 @@
+<meta>
+    <script src="client.lua" type="client" size="2062" />
+    <script src="gui.lua" type="client" size="2144" />
+    
+    <script src="server.lua" type="server" />
+    <script src="skins.lua" type="server" />
+    <script src="saving.lua" type="server" />
+    <script src="nude.lua" type="server" />
+    
+    <file src="files/dick.dff" type="client" />
+    <file src="files/dickwhite.txd" type="client" />
+    <file src="files/dickblack.txd" type="client" />
+    
+    <file src="files/skins/1.txd" type="client" />
+    <file src="files/skins/266.txd" type="client" />
+    <file src="files/skins/267.txd" type="client" />
+    <file src="files/skins/268.txd" type="client" />
+    <file src="files/skins/270.txd" type="client" />
+    <file src="files/skins/271.txd" type="client" />
+    <file src="files/skins/272.txd" type="client" />
+    <file src="files/skins/290.txd" type="client" />
+    <file src="files/skins/291.txd" type="client" />
+    <file src="files/skins/292.txd" type="client" />
+    <file src="files/skins/293.txd" type="client" />
+    <file src="files/skins/294.txd" type="client" />
+    <file src="files/skins/295.txd" type="client" />
+    <file src="files/skins/296.txd" type="client" />
+    <file src="files/skins/297.txd" type="client" />
+    <file src="files/skins/298.txd" type="client" />
+    <file src="files/skins/299.txd" type="client" />
+    <file src="files/skins/300.txd" type="client" />
+    <file src="files/skins/301.txd" type="client" />
+    <file src="files/skins/302.txd" type="client" />
+    <file src="files/skins/303.txd" type="client" />
+    <file src="files/skins/304.txd" type="client" />
+    
+    <file src="files/skins/1.dff" type="client" />
+    <file src="files/skins/266.dff" type="client" />
+    <file src="files/skins/267.dff" type="client" />
+    <file src="files/skins/268.dff" type="client" />
+    <file src="files/skins/270.dff" type="client" />
+    <file src="files/skins/271.dff" type="client" />
+    <file src="files/skins/272.dff" type="client" />
+    <file src="files/skins/290.dff" type="client" />
+    <file src="files/skins/291.dff" type="client" />
+    <file src="files/skins/292.dff" type="client" />
+    <file src="files/skins/293.dff" type="client" />
+    <file src="files/skins/294.dff" type="client" />
+    <file src="files/skins/295.dff" type="client" />
+    <file src="files/skins/296.dff" type="client" />
+    <file src="files/skins/297.dff" type="client" />
+    <file src="files/skins/298.dff" type="client" />
+    <file src="files/skins/299.dff" type="client" />
+    <file src="files/skins/300.dff" type="client" />
+    <file src="files/skins/301.dff" type="client" />
+    <file src="files/skins/302.dff" type="client" />
+    <file src="files/skins/303.dff" type="client" />
+    <file src="files/skins/304.dff" type="client" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

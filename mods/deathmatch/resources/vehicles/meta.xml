@@ -1,0 +1,84 @@
+<meta>
+    <script src="vehicles.lua" />
+    <script src="vehicles_c.lua" type="client" size="2970" />
+    <script src="alarma.lua" />
+    <script src="alarma_c.lua" type="client" size="3463" />
+    <file src="alarma.mp3" />
+    <file src="mando.mp3" />
+    <script src="util.lua" />
+    <script src="util.lua" type="client" size="2201" />
+    
+    
+    <export function="getMaletero" type="client" />
+    
+    <!-- Creates a new vehicle based off an old one (clones the vehicle & creates it permanently)
+		parameters:
+			(player) the player which the new vehicle should belong to.
+			(vehicle) the vehicle to clone.
+	-->
+    <export function="create" />
+    <export function="reloadVehicle" />
+    
+    <!-- Returns the vehicle with that ID (if any was found).
+		parameters:
+			(number) vehicle ID of the car to search for.
+		returns:
+			(vehicle) the vehicle if one was found, (bool) false otherwise.
+	-->
+    <export function="getVehicle" />
+    <export function="deleteVehicle" />
+    
+    <export function="getIDFromVehicle" />
+    
+    <!-- Retrieves the vehicle owner's character ID.
+		parameters:
+			(vehicle) the vehicle to get the owner of.
+		returns:
+			(number) character ID if owned by anyone, (bool) false if civilian, (nil) if not a valid vehicle.
+	-->
+    <export function="getOwner" />
+    
+    <!-- Returns true if the vehicle has tinted windows.
+		parameters:
+			(vehicle) the vehicle to check for tinted windows.
+		returns:
+			(bool) true if the vehicle has tinted windows, false otherwise.
+	-->
+    <export function="hasTintedWindows" />
+    
+    <!-- Locks or unlocks a vehicle, depending the previous state.
+		parameters:
+			(player) the player who wants to (un)lock the given vehicle.
+			(vehicle) the vehicle to (un)lock.
+		returns:
+			(bool) true if toggling the lock was successful, false otherwise.
+	-->
+    <export function="toggleLock" />
+    <export function="saveVehicle" />
+    
+    
+    <script src="speedo_c.lua" type="client" size="4566" />
+    
+    <script src="fuel.lua" />
+    <script src="fuel_c.lua" type="client" size="3946" />
+    <file src="fuelpoint.png" />
+    <file src="images/engine.png" />
+    <file src="images/background.png" />
+    <file src="llanta.jpg" />
+    <file src="aleron.jpg" />
+    <file src="images/break.png" />
+    <file src="images/cerrado.png" />
+    <file src="images/averia.png" />
+    <file src="images/accident.png" />
+    <file src="images/fuel.png" />
+    <file src="images/lights.png" />
+    <file src="images/highway.png" />
+    <file src="images/speed60.png" />
+    <file src="images/speed90.png" />
+    <file src="images/speed120.png" />
+    <file src="images/window.png" />
+    
+    
+    <include resource="sql" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

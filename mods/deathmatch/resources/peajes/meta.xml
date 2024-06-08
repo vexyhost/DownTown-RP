@@ -1,0 +1,6 @@
+<meta>
+    <!--<script src="peaje_a.lua" />
+    <script src="peaje_b.lua" />-->
+    <script src="peaje_palomino-montgomery.lua" />
+    <!--<script src="peaje_d.lua" />-->
+</meta>

@@ -1,0 +1,25 @@
+<!--
+Copyright (c) 2019 DownTown RolePlay
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+<meta>
+    <info author="Jefferson" name="Sistema de Regulación de Usuarios de Foro vía IG" version="1.3" />
+    
+    <script src="foro.lua" />
+    <script src="foro_c.lua" type="client" size="2620" />
+    <export function="actualizarPermisosEnForo" />
+    
+    <min_mta_version server="1.5.3-9.11270" client="1.5.3-9.11270"></min_mta_version>
+</meta>

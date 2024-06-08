@@ -1,0 +1,38 @@
+<meta>
+    <info author="anonimo" description="ruedas" version="1.0" type="script" />
+    <script src="script.lua" type="client" size="3150" />
+    <file src="wheel.txd" type="client" />
+    <file src="1.dff" type="client" />
+    <file src="2.dff" type="client" />
+    <file src="3.dff" type="client" />
+    <file src="4.dff" type="client" />
+    <file src="5.dff" type="client" />
+    <file src="wheel_or1.dff" type="client" />
+    <file src="wheel_or1.txd" type="client" />
+    <file src="2.txd" type="client" />
+    <file src="wheel_gn1.dff" type="client" />
+    <file src="wheel_gn2.dff" type="client" />
+    <file src="wheel_gn3.dff" type="client" />
+    <file src="wheel_gn4.dff" type="client" />
+    <file src="wheel_lr1.dff" type="client" />
+    <file src="wheel_lr4.dff" type="client" />
+    <file src="wheel_lr5.dff" type="client" />
+    <file src="wheel_sr6.dff" type="client" />
+    <file src="wheel_sr3.dff" type="client" />
+    <file src="wheel_sr3.txd" type="client" />
+    <file src="nos.txd" type="client" />
+    <file src="nto_b_l.dff" type="client" />
+    <file src="nto_b_s.dff" type="client" />
+    <file src="nto_b_tw.dff" type="client" />
+    <file src="weh.txd" type="client" />
+    <file src="exh_b_l.dff" type="client" />
+    <file src="exh_b_m.dff" type="client" />
+    <file src="exh_b_s.dff" type="client" />
+    <file src="exh_b_t.dff" type="client" />
+    <file src="exh_b_ts.dff" type="client" />
+    <file src="wheel_sr1.dff" type="client" />
+    <file src="wheel_sr1.txd" type="client" />
+    <file src="wheel_sr5.dff" type="client" />
+    <file src="wheel_sr5.txd" type="client" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

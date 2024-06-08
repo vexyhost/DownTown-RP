@@ -1,0 +1,78 @@
+<!--
+Copyright (c) 2010 MTA: Paradise
+Copyright (c) 2020 DownTown RolePlay
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+<meta>
+    <script src="interiorpositions.lua" />
+    
+    <script src="interiors.lua" />
+    <script src="interiors_c.lua" type="client" size="6722" />
+    
+    <script src="panel_s.lua" />
+    <script src="panel_c.lua" type="client" size="2324" />
+    
+    <export function="isInteriorAlquiler" />
+    <export function="realizarCompra" />
+    <!-- FIXME: Remove this function and replace with more appropriate ones (getExteriorPosition, getInteriorPositon, getName) -->
+    <export function="getInterior" />
+    <export function="getInteriorIDAt" />
+    <export function="solicitarVentaInterior" />
+    <export function="getInteriorType" />
+    <export function="getInteriors" />
+    <export function="getInteriorsTipo" />
+    <export function="getInteriorPositions" />
+    
+    <!-- Changes the Drop-Off point for the delivery job.
+		parameters:
+			(number) interior id - equals the dimension of being inside, can be retrieved via /getinterior.
+			(number) x-position
+			(number) y-position
+			(number) z-position
+		returns:
+			(bool) true if successful, false otherwise.
+	-->
+    <export function="setDropOff" />
+    
+    <!-- Locks or unlocks an interior, depending the previous state.
+		parameters:
+			(player) the player who wants to (un)lock the given interior.
+			(element) either the interior's inside's colshape or the outside's colshape.
+		returns:
+			(bool) true if toggling the lock was successful, false otherwise.
+	-->
+    <export function="toggleLock" />
+    <script src="blips.lua" />
+    
+    <include resource="sql" />
+    <export function="getPos" />
+    
+    <export function="isTienda" />
+    
+    <export function="getProductos" />
+    <export function="giveProductos" />
+    <export function="takeProductos" />
+    
+    <export function="getRecaudacion" />
+    <export function="giveRecaudacion" />
+    <export function="takeRecaudacion" />
+    <export function="actualizarRecaudacion" />
+    
+    <aclrequest>
+        <right name="function.restartResource" access="true" />
+    </aclrequest>
+    
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

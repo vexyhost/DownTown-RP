@@ -1,0 +1,57 @@
+<!--
+Copyright (c) 2010 MTA: Paradise
+Copyright (c) 2020 DownTown RolePlay
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+Copyright (C) 2016  Bone County Roleplay
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+<meta>
+    <script src="factions.lua" />
+    
+    <export function="getFactionName" />
+    <export function="getFactionOwners" />
+    <export function="isFactionOwner" />
+    <export function="isFactionOwner2" />
+    <export function="getFactionTag" />
+    <export function="getFactionPresupuesto" />
+    <export function="giveFactionPresupuesto" />
+    <export function="takeFactionPresupuesto" />
+    
+    <export function="getPlayerSueldo" />
+    <export function="getPlayerFactions" />
+    <export function="sendMessageToFaction" />
+    <export function="isPlayerInFaction" />
+    <export function="isPlayerInFactionType" />
+    <export function="createFactionBlip" />
+    <export function="createFactionBlip2" />
+    <export function="destroyFactionBlip" />
+    
+    <script src="factions_c.lua" type="client" size="1395" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

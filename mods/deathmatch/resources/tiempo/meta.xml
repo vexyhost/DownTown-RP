@@ -1,0 +1,13 @@
+<meta>
+    <info author="aG Development Team" type="script" description="Weather Structure" />
+    
+    <script src="s_weather_system.lua" />
+    <script src="c_weather_system.lua" type="client" size="11388" />
+    
+    <file src="clear.png" />
+    <file src="cloudy.png" />
+    <file src="hot.png" />
+    <file src="rain.png" />
+    <file src="foggy.png" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

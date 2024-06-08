@@ -1,0 +1,26 @@
+<meta>
+    <info author="Talidan" type="misc" name="Custom Blips" description="A resource to create custom blips" version="1.1" />
+    
+    <script src="imagelib.lua" type="client" size="3647" />
+    <script src="blipstreamer_client.lua" type="client" size="8509" />
+    <script src="customblips.lua" type="client" size="3433" />
+    <script src="utility.lua" type="client" size="3636" />
+    <script src="radar.lua" type="client" size="1875" />
+    
+    <file src="oeste.png" />
+    <file src="este.png" />
+    <file src="sur.png" />
+    
+    <export function="guiConvertToCustomBlip" type="client" />
+    <export function="createCustomBlip" type="client" />
+    <export function="getCustomBlipStreamRadius" type="client" />
+    <export function="setCustomBlipStreamRadius" type="client" />
+    <export function="getCustomBlipPosition" type="client" />
+    <export function="setCustomBlipPosition" type="client" />
+    <export function="setCustomBlipAlpha" type="client" />
+    <export function="setCustomBlipRadarScale" type="client" />
+    <export function="setCustomBlipVisible" type="client" />
+    <export function="isCustomBlipVisible" type="client" />
+    <export function="destroyCustomBlip" type="client" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

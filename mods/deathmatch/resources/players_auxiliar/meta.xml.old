@@ -1,0 +1,33 @@
+<!--
+Copyright (c) 2010 MTA: Paradise
+Copyright (c) 2020 DownTown RolePlay
+Copyright (c) 2019 DownTown Roleplay
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<meta>
+    <info author="Jefferson" name="Sistema Auxiliar de Players" version="1.0" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903" />
+    <script src="main.lua" />
+    <script src="andar.lua" />
+    <script src="main_c.lua" type="client" size="6799" />
+    <script src="registration.lua" />
+    <script src="respawn.lua" />
+    <script src="respawn_c.lua" type="client" size="5581" />
+    <script src="afk.lua" />
+    <script src="bodas_c.lua" type="client" size="456" />
+    <script src="bodas.lua" />
+    <script src="afk_c.lua" type="client" size="2059" />
+</meta>

@@ -1,0 +1,104 @@
+<meta>
+    <info author="Remp" name="GUI Editor" version="3.1.3" type="misc" />
+    
+    <config src="help.xml" type="client" />
+    
+    <script src="server.lua" type="server" />
+    
+    <script src="client/util.lua" type="client" size="16737" />
+    <script src="util_common.lua" type="client" size="1418" />
+    <script src="util_common.lua" type="server" />
+    
+    <script src="client/extensions/gridlist.lua" type="client" size="38696" />
+    
+    <script src="client/input.lua" type="client" size="3762" />
+    <script src="client/settings.lua" type="client" size="27984" />
+    
+    <script src="client/main.lua" type="client" size="31608" />
+    <script src="client/menu.lua" type="client" size="20878" />
+    <script src="client/menu_item.lua" type="client" size="33403" />
+    
+    <script src="client/creator.lua" type="client" size="4182" />
+    <script src="client/mover.lua" type="client" size="5794" />
+    <script src="client/sizer.lua" type="client" size="7231" />
+    <script src="client/attacher.lua" type="client" size="4240" />
+    
+    <script src="client/resolution_preview.lua" type="client" size="11054" />
+    <script src="client/titlebar_button.lua" type="client" size="2593" />
+    <script src="client/coder.lua" type="client" size="20072" />
+    <script src="client/variables.lua" type="client" size="3595" />
+    <script src="client/undo_redo.lua" type="client" size="15788" />
+    <script src="client/snapping.lua" type="client" size="20015" />
+    <script src="client/code_generation.lua" type="client" size="46139" />
+    <script src="client/output.lua" type="client" size="10767" />
+    <script src="client/crush.lua" type="client" size="3199" />
+    <script src="client/message_box.lua" type="client" size="10762" />
+    <script src="client/dimensions_set.lua" type="client" size="4496" />
+    <script src="client/offset.lua" type="client" size="3700" />
+    <script src="client/multiple_element.lua" type="client" size="8080" />
+    <script src="client/context_bar.lua" type="client" size="3090" />
+    <script src="client/getters.lua" type="client" size="14977" />
+    <script src="client/font.lua" type="client" size="25786" />
+    <script src="client/image_picker.lua" type="client" size="11448" />
+    <script src="client/expanding_gridlist.lua" type="client" size="8896" />
+    <script src="client/sharing.lua" type="client" size="7531" />
+    
+    <script src="client/help.lua" type="client" size="10941" />
+    <file src="client/help_documentation.xml" />
+    
+    <script src="client/gui_properties.lua" type="client" size="18004" />
+    <file src="cegui/cegui_property_descriptions.xml" />
+    <file src="cegui/cegui_widgets.xml" />
+    
+    <script src="client/load_gui_code.lua" type="client" size="47988" />
+    <script src="client/load_gui.lua" type="client" size="18828" />
+    
+    <script src="client/tutorials/tutorial.lua" type="client" size="6556" />
+    <script src="client/tutorials/tutorial_output_type.lua" type="client" size="7878" />
+    <script src="client/tutorials/tutorial_properties.lua" type="client" size="2062" />
+    <script src="client/tutorials/tutorial_main.lua" type="client" size="28533" />
+    
+    
+    <script src="client/menus/menu_manager.lua" type="client" size="1408" />
+    <script src="client/menus/menu_common.lua" type="client" size="9587" />
+    <script src="client/menus/menu_main.lua" type="client" size="26279" />
+    
+    <script src="client/menus/items/item_common.lua" type="client" size="44074" />
+    <script src="client/menus/items/item_resolution.lua" type="client" size="2548" />
+    <script src="client/menus/items/item_multiple_selection.lua" type="client" size="2305" />
+    <script src="client/menus/items/item_dx.lua" type="client" size="35396" />
+    
+    <script src="client/colorpicker/colorpicker.lua" type="client" size="24981" />
+    <file src="client/colorpicker/alpha.png" />
+    <file src="client/colorpicker/palette.png" />
+    
+    <file src="fonts/PetitFormalScript.ttf" />
+    <file src="fonts/EmblemaOne.ttf" />
+    
+    <script src="client/dx_elements/dx_checkbox.lua" type="client" size="2349" />
+    <script src="client/dx_elements/dx_radiobutton.lua" type="client" size="2682" />
+    <script src="client/dx_elements/dx_slider.lua" type="client" size="5377" />
+    <script src="client/dx_elements/dx_editbox.lua" type="client" size="17191" />
+    <script src="client/dx_elements/dx_elements.lua" type="client" size="26455" />
+    
+    <file src="images/dx_elements/checkbox_tick.png" />
+    <file src="images/dx_elements/slider_end.png" />
+    <file src="images/dx_elements/slider_pointer.png" />
+    <file src="images/dx_elements/radio_button.png" />
+    
+    <file src="images/dot_white.png" />
+    <file src="images/reset.png" />
+    <file src="images/cross.png" />
+    <file src="images/arrow_out.png" />
+    <file src="images/plus.png" />
+    
+    <file src="images/examples/mtalogo.png" />
+    <file src="images/examples/shruk.png" />
+    
+    <aclrequest>
+        <right name="general.ModifyOtherObjects" access="true" />
+        <right name="function.callRemote" access="true" />
+        <!-- <right name="command.start" access="true" /> -->
+    </aclrequest>
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

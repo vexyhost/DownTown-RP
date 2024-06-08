@@ -1,0 +1,41 @@
+<!--
+Copyright (c) 2010 MTA: Paradise
+Copyright (c) 2020 DownTown RolePlay
+Copyright (c) 2016 DownTown County Roleplay
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 3 of the License, or
+(at your option) any later version.
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<meta>
+    <info author="mabako and Jefferson" name="Admin-Script via Commands 1.4" version="1.4" />
+    
+    
+    <script src="sancion.lua" type="server" />
+    <script src="sancion_c.lua" type="client" size="8042" />
+    <script src="auxiliar.lua" type="server" />
+    <script src="player.lua" type="server" />
+    <script src="util.lua" type="server" />
+    <script src="Sadmin.lua" type="client" size="4343" />
+    <script src="spectate.lua" type="server" />
+    <script src="duda.lua" type="server" />
+    <script src="gestiones.lua" type="server" />
+    <script src="teletransporte.lua" type="client" size="2364" />
+    <export function="numDudas" type="server" />
+    <export function="actualizarPosicion" type="server" />
+    <export function="resolverDudaWeb" type="server" />
+    <export function="setPassword" type="server" />
+    <export function="avisoStaff" type="server" />
+    <export function="anularLlaves" type="server" />
+    <export function="aplicarBan" type="server" />
+    <min_mta_version server="1.5.5-9.14060" client="1.5.2-9.07903"></min_mta_version>
+</meta>

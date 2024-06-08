@@ -1,0 +1,24 @@
+<map edf:definitions="editor_main">
+	<object id="convertFFS (0)" model="14876" posX="-2027.7451172" posY="-113.7509766" posZ="1043.2658691" rotX="0.0000000" rotY="0.0000000" rotZ="89.2474365" dimension="-1" interior="26" />
+	<object id="convertFFS (1)" model="1498" posX="-2032.3000488" posY="-119.0248871" posZ="1038.1955566" rotX="0.0000000" rotY="0.0000000" rotZ="90.0000000" dimension="-1" interior="26" />
+	<object id="convertFFS (2)" model="10182" posX="-2020.2902832" posY="-116.4788666" posZ="1039.8902588" rotX="0.0000000" rotY="0.0000000" rotZ="359.2500000" dimension="-1" interior="26" />
+	<object id="convertFFS (3)" model="1744" posX="-2032.3382568" posY="-116.4563675" posZ="1039.3261719" rotX="0.0000000" rotY="0.0000000" rotZ="89.2500000" dimension="-1" interior="26" />
+	<object id="convertFFS (4)" model="1744" posX="-2032.3122559" posY="-114.4671555" posZ="1039.3237305" rotX="0.0000000" rotY="0.0000000" rotZ="89.5000000" dimension="-1" interior="26" />
+	<object id="convertFFS (5)" model="2184" posX="-2029.6767578" posY="-114.6228104" posZ="1038.1955566" rotX="0.0000000" rotY="0.0000000" rotZ="70.0000000" dimension="-1" interior="26" />
+	<object id="convertFFS (6)" model="1337" posX="-2032.0361328" posY="-116.5153427" posZ="1038.5456543" rotX="358.0194702" rotY="8.0048218" rotZ="196.2784424" dimension="-1" interior="26" />
+	<object id="convertFFS (7)" model="2969" posX="-2031.9924316" posY="-116.0194550" posZ="1039.7929688" rotX="0.0000000" rotY="0.0000000" rotZ="89.7500000" dimension="-1" interior="26" />
+	<object id="convertFFS (8)" model="2478" posX="-2031.9548340" posY="-114.0858917" posZ="1039.9439697" rotX="0.0000000" rotY="0.0000000" rotZ="90.0000000" dimension="-1" interior="26" />
+	<object id="convertFFS (9)" model="1271" posX="-2031.8657227" posY="-119.8676300" posZ="1038.5379639" rotX="0.0000000" rotY="0.0000000" rotZ="0.0000000" dimension="-1" interior="26" />
+	<object id="convertFFS (10)" model="2062" posX="-2026.3493652" posY="-120.0007553" posZ="1038.7377930" rotX="0.0000000" rotY="0.0000000" rotZ="278.7500000" dimension="-1" interior="26" />
+	<object id="convertFFS (11)" model="2062" posX="-2027.1085205" posY="-119.9843750" posZ="1038.7641602" rotX="0.0000000" rotY="0.0000000" rotZ="306.2500000" dimension="-1" interior="26" />
+	<object id="convertFFS (12)" model="1840" posX="-2026.3699951" posY="-120.0020370" posZ="1039.2814941" rotX="0.0000000" rotY="0.0000000" rotZ="253.5000000" dimension="-1" interior="26" />
+	<object id="convertFFS (13)" model="1747" posX="-2029.7448730" posY="-114.8626938" posZ="1038.9713135" rotX="0.0000000" rotY="0.0000000" rotZ="230.0000000" dimension="-1" interior="26" />
+	<object id="convertFFS (14)" model="1840" posX="-2027.1564941" posY="-119.9636536" posZ="1039.3109131" rotX="0.0000000" rotY="0.0000000" rotZ="290.0000000" dimension="-1" interior="26" />
+	<object id="convertFFS (15)" model="1428" posX="-2028.6091309" posY="-120.1628189" posZ="1039.5632324" rotX="9.9996033" rotY="0.5077209" rotZ="179.9118652" dimension="-1" interior="26" />
+	<object id="convertFFS (16)" model="1421" posX="-2025.9952393" posY="-112.8102112" posZ="1038.9080811" rotX="0.0000000" rotY="0.0000000" rotZ="0.0000000" dimension="-1" interior="26" />
+	<object id="convertFFS (17)" model="2255" posX="-2024.2778320" posY="-112.8802795" posZ="1040.6029053" rotX="0.0000000" rotY="0.0000000" rotZ="359.7500000" dimension="-1" interior="26" />
+	<object id="convertFFS (18)" model="2114" posX="-2032.0507812" posY="-115.4094772" posZ="1039.8129883" rotX="0.0000000" rotY="291.9999695" rotZ="208.0000000" dimension="-1" interior="26" />
+	<object id="convertFFS (19)" model="1598" posX="-2027.9841309" posY="-119.9726639" posZ="1038.4255371" rotX="0.0000000" rotY="300.0000000" rotZ="158.0000000" dimension="-1" interior="26" />
+	<object id="convertFFS (20)" model="2482" posX="-2024.4145508" posY="-120.2754440" posZ="1038.1955566" rotX="0.0000000" rotY="0.0000000" rotZ="179.7500000" dimension="-1" interior="26" />
+	<object id="convertFFS (21)" model="1764" posX="-2028.8851318" posY="-115.0460892" posZ="1038.1955566" rotX="0.0000000" rotY="0.0000000" rotZ="60.0000000" dimension="-1" interior="26" />
+</map>

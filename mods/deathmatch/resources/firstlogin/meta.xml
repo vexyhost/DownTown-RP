@@ -1,0 +1,6 @@
+<meta>
+    <info author="Jefferson" version="1.0" type="script" name="Aviso de descarga" description="Cuando un usuario nuevo entra al SV, le notifica la descarga."></info>
+    <script src="server.lua" type="server"></script>
+    <script src="client.lua" type="client" size="507"></script>
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

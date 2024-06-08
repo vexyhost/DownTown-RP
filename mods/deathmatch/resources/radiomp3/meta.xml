@@ -1,0 +1,6 @@
+<meta>
+    <info name="Sistema de radio para vehículos" author="Jefferson" version="1.3 BETA" type="script" />
+    <script src="radio.lua" type="server" />
+    <script src="radio_c.lua" type="client" size="12445" />
+    <min_mta_version server="1.5.3-9.11270" client="1.5.3-9.11270"></min_mta_version>
+</meta>

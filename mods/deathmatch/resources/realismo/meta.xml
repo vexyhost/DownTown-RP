@@ -1,0 +1,9 @@
+<meta>
+    <info author="MissPayne" version="1.0" type="script" name="Tractor" />
+    <script src="c_running.lua" type="client" size="3162" />
+    <script src="s_running.lua" type="server" />
+    <script src="c_realism_system.lua" type="client" size="1283" />
+    <script src="c_thermal_vision.lua" type="client" size="7507" />
+    <file src="TruckBackingUpBeep.mp3" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

@@ -1,0 +1,38 @@
+<meta>
+    <script src="seniales.lua" type="client" size="5771" />
+    <file src="SAMPRoadSigns.txd" />
+    <file src="SAMPRoadSign42.dff" />
+    <file src="SAMPRoadSign43.dff" />
+    <file src="SAMPRoadSign44.dff" />
+    <file src="SAMPRoadSign45.dff" />
+    <file src="SAMPRoadSign31.dff" />
+    <file src="SAMPRoadSign32.dff" />
+    <file src="SAMPRoadSign19.dff" />
+    <file src="SAMPRoadSign20.dff" />
+    <file src="SAMPRoadSign29.dff" />
+    <file src="SAMPRoadSign1.dff" />
+    <file src="SAMPRoadSign2.dff" />
+    <file src="SAMPRoadSign3.dff" />
+    <file src="SAMPRoadSign10.dff" />
+    <file src="SAMPRoadSign8.dff" />
+    <file src="SAMPRoadSign9.dff" />
+    <file src="gay_xref.txd" />
+    
+    <file src="SAMPRoadSign42.col" />
+    <file src="SAMPRoadSign43.col" />
+    <file src="SAMPRoadSign44.col" />
+    <file src="SAMPRoadSign45.col" />
+    <file src="SAMPRoadSign31.col" />
+    <file src="SAMPRoadSign32.col" />
+    <file src="SAMPRoadSign19.col" />
+    <file src="SAMPRoadSign20.col" />
+    <file src="SAMPRoadSign29.col" />
+    <file src="SAMPRoadSign1.col" />
+    <file src="SAMPRoadSign2.col" />
+    <file src="SAMPRoadSign3.col" />
+    <file src="SAMPRoadSign10.col" />
+    <file src="SAMPRoadSign8.col" />
+    <file src="SAMPRoadSign9.col" />
+    
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

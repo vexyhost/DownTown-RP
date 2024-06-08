@@ -1,0 +1,14 @@
+<meta>
+    <script src="puertaspoli.lua" type="server" />
+    <script src="multas.lua" type="server" />
+    <script src="policia.lua" type="server" />
+    <script src="panel_s.lua" type="server" />
+    <script src="radar.lua" type="server" />
+    <script src="panel_c.lua" type="client" size="26831" />
+    <script src="camaras_c.lua" type="client" size="5788" />
+    <script src="taser_s.lua" type="server" />
+    <script src="taser_c.lua" type="client" size="470" />
+    
+    <export function="addMulta" type="server" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

@@ -1,0 +1,103 @@
+<meta>
+    <info author="Jefferson" version="1.1" type="script" name="Sistema auxiliar de vehículos" description=" " />
+    
+    <!--<script src="renovaciones.lua" type="server" />-->
+    
+    <script src="precios.lua" type="server" />
+    <script src="precios_c.lua" type="client" size="5606" />
+    
+    <export function="getDatos" />
+    <export function="getDatos" type="client" />
+    
+    <script src="tunning.lua" />
+    <script src="averias.lua" />
+    <export function="isRevisionPendiente" />
+    
+    <export function="getTunning" />
+    <export function="saveTunning" />
+    <export function="applyTunning" />
+    <export function="saveColors" />
+    <export function="applyColors" />
+    <export function="saveVinilos" />
+    
+    <script src="indicators.lua" />
+    <script src="indicators_c.lua" type="client" size="15761" />
+    
+    <export function="isModelVIP" />
+    <export function="isModelVIP" type="client" />
+    
+    <export function="getPrecioFromModel" />
+    <export function="getPrecioFromModel" type="client" />
+    
+    <export function="getPrecioFromModelAntiguo" />
+    <export function="getPrecioFromModelAntiguo" type="client" />
+    
+    <export function="getClaseFromModel" />
+    <export function="getClaseFromModel" type="client" />
+    
+    <export function="getCosteRenovacionFromModel" />
+    <export function="getCosteRenovacionFromModel" type="client" />
+    
+    <script src="crash_s.lua" type="server" />
+    <script src="crash_c.lua" type="client" size="4402" />
+    
+    <script src="velocidad.lua" type="server" />
+    <export function="solicitarMejora" />
+    <export function="resolicitarMejora" />
+    
+    <script src="main.lua" type="server" />
+    <script src="main_c.lua" type="client" size="10018" />
+    
+    <!-- Sistema de Cambio Manual / Embrague	-->
+    <script src="manual_c.lua" type="client" size="10938"></script>
+    
+    <!-- Sistema de sonido al girar marchatras	-->
+    <script src="smarchaa_c.lua" type="client" size="2340"></script>
+    <script src="smarchaa.lua" type="server"></script>
+    <file src="SFX_REVERSE_BEEP_2.mp3" />
+    
+    <!-- Vinilos mediante shaders -->
+    <script src="shader.lua" type="client" size="9179" />
+    <file src="shader.fx" />
+    <!-- PJ : Elegy -->
+    <file src="img/remap.png" />
+    <file src="img/PJ_Elegy2.png" />
+    <file src="img/PJ_Elegy3.png" />
+    <!-- PJ : Flash -->
+    <file src="img/PJ_Flash1.bmp" />
+    <file src="img/PJ_Flash2.png" />
+    <file src="img/PJ_Flash3.png" />
+    <!-- PJ : Savanna -->
+    <file src="img/PJ_Savanna1.png" />
+    <file src="img/PJ_Savanna2.png" />
+    <file src="img/PJ_Savanna3.png" />
+    <!-- PJ : Slamvan -->
+    <file src="img/PJ_Slamvan1.png" />
+    <file src="img/PJ_Slamvan2.png" />
+    <file src="img/PJ_Slamvan3.png" />
+    <!-- PJ : Sultan -->
+    <file src="img/PJ_Sultan1.png" />
+    <file src="img/PJ_Sultan2.png" />
+    <file src="img/PJ_Sultan3.png" />
+    <!-- PJ : Jester -->
+    <file src="img/PJ_Jester1.png" />
+    <file src="img/PJ_Jester2.png" />
+    <file src="img/PJ_Jester3.png" />
+    <!-- Cambio Automatico y manual -->
+    <file src="img/automatico.png" />
+    <file src="img/manual.png" />
+    <file src="img/background.png" />
+    
+    <!-- Interior de vehículos y exterior -->
+    <file src="img/remapelegybody128.png" />
+    <file src="img/elegy92interior128.png" />
+    <file src="img/sultan92stickers128.png" />
+    <file src="img/Lon.png" />
+    <file src="img/Loff.png" />
+    <file src="img/matricula.png" />
+    <file src="img/numerosm.png" />
+    <file src="img/butanero.png" />
+    <file src="img/logospand.png" />
+    
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

@@ -1,0 +1,23 @@
+<meta>
+    <script src="casco.lua" type="client" size="2009" />
+    <file src="cascos/casco1.txd" />
+    <file src="cascos/casco2.txd" />
+    <file src="cascos/casco3.txd" />
+    <file src="cascos/casco4.txd" />
+    <file src="cascos/casco5.txd" />
+    <file src="cascos/cascoazul.txd" />
+    <file src="cascos/cascointegral.dff" />
+    <file src="cascos/cascojet.dff" />
+    <file src="cascos/cascojet.txd" />
+    <file src="cascos/cascomilitar.txd" />
+    <file src="cascos/cascomonster1.txd" />
+    <file src="cascos/cascomonster2.txd" />
+    <file src="cascos/cascomotero.dff" />
+    <file src="cascos/cascomotero.txd" />
+    <file src="cascos/casconaranja.txd" />
+    <file src="cascos/cascoverde.txd" />
+    <file src="cascos/moto.dff" />
+    <file src="cascos/moto.txd" />
+    <file src="cascos/motosporting.txd" />
+    <min_mta_version server="1.3.4-0.00000" client="1.5.2-9.07903"></min_mta_version>
+</meta>

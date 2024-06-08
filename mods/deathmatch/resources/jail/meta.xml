@@ -1,0 +1,6 @@
+<meta>
+    <script src="jail.lua" />
+    <export function="jailWeb" />
+    <export function="serverJail" type="server" />
+    <export function="jailPlayer" type="server" />
+</meta>
